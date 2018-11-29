@@ -1,0 +1,39 @@
+// Accomodations
+.nav-item__container {
+    position: relative;
+}
+
+
+.nav-item__header {
+    background: rgba(111,106,178,.9);
+    position: absolute;
+    top: -108px;
+    left: 0;
+    right: 0;
+    z-index: 40;
+}
+
+.nav-item__title {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 20px 0;
+    
+
+    & h3, h2 {
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+        margin: 0;
+    }
+}
+
+.nav-item__body-title {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.nav-item__content-lists {
+    padding-left: 0;
+    list-style: none;
+}
+

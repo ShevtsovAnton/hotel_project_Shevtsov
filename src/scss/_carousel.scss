@@ -1,0 +1,97 @@
+/*Slideshow settings*/
+  .carousel__container {
+    position: relative;
+    height: 600px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+  }
+  
+  .carousel__item {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+  
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+  }
+  
+  .active {
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  /*Other styles*/
+  .carousel__item {
+    font-size: 40px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #333;
+    color: #fff;
+  }
+  
+  .carousel__item:nth-of-type(1) {
+    background: url("../assets/img/pexels-photo-1097439.jpeg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .carousel__item:nth-of-type(2) {
+    background: url("../assets/img/pexels-photo-189293.jpeg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  
+  }
+  .carousel__item:nth-of-type(3) {
+    background: url("../assets/img/pexels-photo-271672.jpeg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .carousel__item:nth-of-type(4) {
+    background: url("../assets/img/pexels-photo-279746.jpeg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .carousel__item:nth-of-type(5) {
+    background: url("../assets/img/pexels-photo-279813.jpeg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .carousel__controls {
+    width: 100%;
+    z-index: 20;
+    position: absolute;
+    top: 280px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 30px;
+  }
+  
+  .carousel__controls-item {
+    display: block;
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+    opacity: 0.6;
+  }
+  
+  #previous {
+    background-image: url("../assets/img/back.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  #next {
+    background-image: url("../assets/img/next.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  } 
+  
+  

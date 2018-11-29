@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Make a Reservation</title>
+</head>
+<body>
+    <!-- <header class="page-header">
+        <div class="page-header__logo-wrapper">
+            <a class="page-header__logo" href="">hotel brand</a> 
+        </div>
+        <nav class="main-nav">
+            <div class="main-nav__wrapper">
+                <ul class="main-nav__list site-list">
+                    <li class="site-list__item site-list__item--active">
+                        <a href="">Main</a>
+                    </li>
+                    <li class="site-list__item">
+                        <a href="">Rooms</a>
+                        <ul class="site-list__dropdown-list">
+                            <li class="site-list__subItem">
+                                <a href="">Room 1</a>
+                            </li>
+                            <li class="site-list__subItem">
+                                <a href="">Room 2</a>
+                            </li>
+                            <li class="site-list__subItem">
+                                <a href="">Room 3</a>
+                            </li>
+                            <li class="site-list__subItem">
+                                <a href="">Room 4</a>
+                            </li>
+                            <li class="site-list__subItem">
+                                <a href="">Room 5</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="site-list__item">
+                        <a href="">Services</a>
+                    </li>
+                    <li class="site-list__item">
+                        <a href="">Special Offers</a>
+                    </li>
+                    <li class="site-list__item">
+                        <a href="">Contacts</a>
+                    </li>
+                    <li class="site-list__item">
+                        <a href="">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header> -->
+
+    <!-- booking form -->
+    <div class="booking-form__container">
+        <form action="" id="bookingForm">
+            <label for="booking__firstName">Room Id
+                <input type="number" name="booking__roomId" id="booking-roomId" value="1">
+            </label>
+            <label for="booking__firstName">First Name
+                <input type="text" name="booking__firstName" id="booking-firstName">
+            </label>
+            <label for="booking__lastName">Last Name
+                <input type="text" name="booking__lastName" id="booking-lastName">
+            </label>
+            <label for="booking__arivalDate">Arrival Date
+                <input type="date" name="booking__arivalDate" id="booking-arivalDate">
+            </label>
+            <label for="booking__departureDate">Departure Date
+                <input type="date" name="booking__departureDate" id="booking-departureDate">
+            </label>
+            <label for="booking__nights">Nights
+                <output id="numberOfNights">00</output>
+            </label>
+            <label for="booking__guests">Guests
+                <select name="booking__guests" id="booking-guests">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </label>
+             <label for="booking__email">Email
+                <input name="booking__email" id="booking-email" type="email">
+            </label>
+             <label for="booking__phone">Phone
+                <input name="booking__phone" id="booking-phone" type="tel">
+            </label>
+            <button type="submit"id="booking-submitButton">Submit</button>
+        </form>
+    </div>
+
+    <div class="checkBookingForm__container">
+        <form action="" id="bookingForm">
+            <label for="checkBooking__number">Booking Number
+                <input type="number" name="checkBooking__number" id="checkBooking-number">
+            </label>
+            <label for="checkBooking__lastName">Last Name
+                <input type="text" name="checkBooking__lastName" id="checkBooking-lastName">
+            </label>
+            <button type="submit" id="checkBooking-submitButton">Submit</button>
+        </form>
+    </div>
+
+    <div id="displayBookingInfo">
+
+    </div>
+    <script src="../js/booking.js"></script>
+</body>
+</html>

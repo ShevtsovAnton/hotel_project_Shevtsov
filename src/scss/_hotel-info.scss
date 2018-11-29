@@ -1,0 +1,54 @@
+.hotel-info {
+    background-color: $prime-color;
+}
+
+.hotel-info__container {
+    width: 1140px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.hotel-info__name {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+}
+
+.contacts__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hotel-info__contacts-list {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.hotel-info__contacts-item a {
+    text-decoration: none;
+    font-style: normal;
+    color: white;
+    margin-right: 20px;
+}
+
+.hotel-info__contacts-item svg {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    color: white;
+}
+
+
+.contacts-item__social {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+
+.contacts-item__icon {
+    vertical-align: text-bottom;
+}

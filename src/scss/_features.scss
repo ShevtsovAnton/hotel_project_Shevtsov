@@ -1,0 +1,49 @@
+.features__section {
+    max-width: 1170px;
+    margin: auto;
+    padding: 20px 0;
+
+    & h1, h3 {
+        text-transform: uppercase;
+    }
+
+    & h3 {
+        margin: 30px 0 0; 
+    }
+}
+
+.features__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.features__groups {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 30%;
+    }
+
+    & ul {
+        list-style: none;
+        padding-left: 0;
+    }
+}
+
+.features__item {
+    
+    &::before {
+        content: "";
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        background-image: url("../assets/img/angle-right.svg");
+        background-repeat: no-repeat;
+        vertical-align: -10%;
+    }
+}

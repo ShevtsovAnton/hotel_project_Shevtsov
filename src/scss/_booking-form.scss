@@ -1,0 +1,14 @@
+.booking-form__container {
+    margin: 0 auto;
+    width: 1170px;
+
+    & input, output, button {
+        display: block;
+    }
+}
+
+#displayBookingInfo {
+    & span {
+        display: block;
+    }
+}

@@ -1,0 +1,13 @@
+// SPECIALS
+.specials__header {
+    background-color: $prime-color;
+    color: $font-prime-color;
+
+    & h3 {
+        text-align: center;
+        padding: 10px 0;
+        text-transform: uppercase;
+        margin: 0;
+    }
+}
+

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Leisure Hotel Main Page</title>
+</head>
+<body>
+    <header class="page-header">
+        <!-- Burger -->
+    <div class="burger__container">
+        <!-- burger icon -->
+        <a href="" id="burger-toggle" class="burger__toggle" aria-expanded="false">
+            <img src="assets/img/burger-menu.svg" class="burger__icon" alt="">
+            <span>Menu</span>
+        </a>
+
+        <!-- Burger Menu Items-->
+        <nav id="burger-menu" aria-expanded="false" class="burger__menu">
+            <a href=""  id="burger-close" class="burger__close" aria-expanded="false">
+                <img src="assets/img/close.svg" class="burger__close-icon" alt="">
+            </a>
+            <ul class="burger__menu-list">
+                <li class="burger__menu-item">
+                    <a href="#">Main</a>
+                </li>
+                <li class="burger__menu-item">
+                    <a href="#">Accomodations</a>
+                </li>
+                <li class="burger__menu-item">
+                    <a href="#">Services</a>
+                </li>
+                <li class="burger__menu-item">
+                    <a href="#">Special Offers</a>
+                </li>
+                <li class="burger__menu-item">
+                    <a href="#">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="" class="burger__backdrop" id="burger-backdrop"></a>
+    </div>
+        <div class="page-header__logo-wrapper">
+            <a class="page-header__logo" href="">
+                <img src="assets/img/logo.png" alt="hotel-logo">
+                <span>Leisure Hotel</span>
+            </a> 
+        </div>
+        <nav class="main-nav">
+            <div class="main-nav__wrapper">
+                <ul class="main-nav__list site-list">
+                    <li class="site-list__item site-list__item--active">
+                        <a href="">Main</a>
+                    </li>
+                    <li class="site-list__item">
+                        <a href="">Accomodations</a>
+                        <ul class="site-list__dropdown-list">
+                            <li class="site-list__subItem">
+                                <a href="">Room 1</a>
+                            </li>
+                            <li class="site-list__subItem">
+                                <a href="">Room 2</a>
+                            </li>
+                            <li class="site-list__subItem">
+                                <a href="">Room 3</a>
+                            </li>
+                            <li class="site-list__subItem">
+                                <a href="">Room 4</a>
+                            </li>
+                            <li class="site-list__subItem">
+                                <a href="">Room 5</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="site-list__item">
+                        <a href="">Services</a>
+                    </li>
+                    <li class="site-list__item">
+                        <a href="">Special Offers</a>
+                    </li>
+                    <li class="site-list__item">
+                        <a href="">Contacts</a>
+                    </li>
+                </ul>
+                <a href="" role="button" id="bookNowButton">Book Now</a>
+            </div>
+        </nav>
+    </header>
+    
+     <!-- CAROUSEL -->
+    <section class="carousel__wrapper">
+        <div class="carousel__controls">
+            <span class="carousel__controls-item" id="previous"></span>
+            <span class="carousel__controls-item" id="next"></span>
+        </div>
+        <ul class="carousel__container">
+            <li class="carousel__item active">Slide 1</li>
+            <li class="carousel__item">Slide 2</li>
+            <li class="carousel__item">Slide 3</li>
+            <li class="carousel__item">Slide 4</li>
+        <li class="carousel__item">Slide 5</li>
+        </ul>
+    </section>
+
+    <!--Hidden Accomodations -->
+    <section class="nav-item__container accomodations hidden">
+        <div class="nav-item__header">
+            <div class="nav-item__title">
+                <h3>Stylish</h3>
+                <h2>Accomodations</h2>
+            </div>
+        </div>
+        <div class="breadcrumbs">
+            <ul>
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li class="breadcrumbs__last-item">Accomodations</li>
+            </ul>
+        </div>
+        <div class="nav-item__body">
+            <div class="nav-item_body-title">
+                <h2>Let Us Rock You To Sleep</h2>
+                <p>Come wind down in one of 35 rooms and suites, welcoming guests with our signature contemporary style and chic vibe. You’ll sleep like a baby with plush bedding, luxury amenities and some digital features to make resting even easier.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hidden Restaurants -->
+    <section class="nav-item__container restaurants hidden">
+        <div class="nav-item__header">
+            <div class="nav-item__title">
+                <h3>Restaurants</h3>
+                <h2>& Night Life</h2>
+            </div>
+        </div>
+        <div class="breadcrumbs">
+            <ul>
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li class="breadcrumbs__last-item">Restaurants</li>
+            </ul>
+        </div>
+        <div class="nav-item__body">
+            <div class="nav-item__body-title">
+                <h2>Types Of Buffets</h2>
+                <p>The following types of buffets are generally found in some of the Best Buffet Restaurants and could be selected according to the requirements of the customer.</p>
+                <ul class="nav-item__content-lists">
+                    <li>
+                        Cafeteria style:
+                        <p>
+                            In this type of buffet, customers are required to select plates of food according to their choice while waiting in a queue. The cafeteria-style buffet is less frequently practised in restaurants.  
+                        </p> 
+                    </li>
+                    <li>
+                        All You Can Eat:
+                        <p>
+                            The name says it all! These buffet styles are considered as the most beneficial investments on behalf of the customers as they would have to pay a single price for serving themselves with a wide assortment of delicacies. However, it is interesting to note that the popularity of All You Can Eat buffets is waning due to the increasing threats of obesity.
+                        </p>
+                    </li>
+                    <li>
+                        Healthy Buffets:
+                        <p>
+                            These concepts are followed by restaurants that provide soups, fresh produce and salad bars in their menus and promote healthy eating habits. However, these could not be considered as one of the Best Buffet Restaurants owing to the criticisms on the basis of the higher calorie content of specific menu items.
+                        </p>
+                    </li>
+                    <li>
+                        Catered buffets:
+                        <p>
+                            The catered buffets approach is followed by restaurants which specialize in business meetings, special occasions, and weddings as well as holiday parties and also involve facilities of off-site catered buffets in certain cases.                        
+                        </p>
+                    </li>
+                </ul>    
+            </div>
+        </div>
+    </section>
+
+     <!-- Hidden Services -->
+    <section class="nav-item__container services hidden">
+        <div class="nav-item__header">
+            <div class="nav-item__title">
+                <h3>Services</h3>
+                <h2>& Facilities</h2>
+            </div>
+        </div>
+        <div class="breadcrumbs">
+            <ul>
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li class="breadcrumbs__last-item">Services & Facilities</li>
+            </ul>
+        </div>
+        <div class="nav-item__body">
+            <div class="nav-item__body-title">
+                <h2>Best Service Practices</h2>
+                <p>Some of the best characteristics of a good and the guest friendly hotel include:</p>
+                <ul class="nav-item__content-lists">
+                    <li>
+                        Cleanliness: 
+                        <p>
+                            a good hotel should be clean and tidy. This should be a place where you can easily relax and enjoy a good sleep before anything else. A hotel need not be a five star to be clean and tidy.
+                        </p> 
+                    </li>
+                    <li>
+                        Wi-Fi: 
+                        <p>
+                            in this day and age, a reliable internet connection is very important. You should be able to stay in touch with the world, regardless of where you are. The Wi-Fi connection needs to be available and accessible regardless of where you are within a hotel.
+                        </p>
+                    </li>
+                    <li>
+                        The bathroom space:
+                        <p>
+                            a good hotel should have adequate bathroom space. This will allow guests to feel at home and relaxed. It should be spacious enough to set up a few things that you need to use often.
+                        </p>
+                    </li>
+                </ul>    
+            </div>
+        </div>
+    </section>
+
+    <!-- Hidden Special Offers -->
+    <section class="nav-item__container special-offers hidden">
+        <div class="nav-item__header">
+            <div class="nav-item__title">
+                <h3>Special</h3>
+                <h2>Packages</h2>
+            </div>
+        </div>
+        <div class="breadcrumbs">
+            <ul>
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li class="breadcrumbs__last-item">Special Offers</li>
+            </ul>
+        </div>
+        <div class="nav-item__body">
+            <div class="nav-item__body-title">
+                <h2>Special Holiday Package</h2>
+                <p>
+                    A two night stay for two people is usually £435, a remarkably good price for the great location and high quality of the accommodation. But I've found an even better offer- if you log onto the new UK daily deal website Who Pays Full Price within the next 4 days, you can purchase a stay in the Brooklands hotelfor a ridiculous £159- what a bargain! This amazing deal includes a two night stay for two people in a spacious deluxe room, with included breakfast, dinner and a complimentary bottle of wine! I haven't seen such a good deal on a top hotel in a long while! Each room has ensuite facilities, with all the modern amenities; a hairdryer, a direct dial telephone, a flat plasma screen TV with Freeview channels, and a special welcome tray!
+                </p>
+                <p>
+                    Check it out as soon as possible, before the deal closes! It will make the perfect break for you and your partner or best friend to get away from the stresses of everyday life. Enjoy some fresh air, explore somewhere new, relax in luxury accommodation, indulge in delicious food and drink, and truly unwind!
+                </p>   
+            </div>
+        </div>
+    </section>
+
+    <!-- Hotel Info -->
+    <section class="hotel-info">
+        <div class="hotel-info__container">
+            <div class="hotel-info__name">
+                <h2>Leisure Hotel</h2>
+            </div>
+            <div class="contacts__container">
+                <ul class="hotel-info__contacts-list">
+                    <li class="hotel-info__contacts-item">
+                        <svg class="contacts-item__icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path>
+                        </svg>
+                        <a href="callto:38-050-555-22-22">38-050-555-22-22</a>
+                    </li>
+                    <li class="hotel-info__contacts-item">
+                        <a href="mailto:info@hotel.com">
+                            <svg class="contacts-item__icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor" d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"></path>
+                            </svg>
+                            <!-- <svg id="envelope" aria-hidden="true" data-prefix="far" data-icon="envelope" class="svg-inline--fa fa-envelope fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor" d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"></path>
+                            </svg> -->
+                            info@hotel.com
+                        </a>
+                    </li>
+                    <li class="hotel-info__contacts-item">
+                        <svg class="contacts-item__icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path>
+                        </svg>
+                        <!-- <address> -->
+                            <a href="">Av.Green L.City 33251, County, Region, 03030 Country</a>
+                        <!-- </address> -->
+                    </li>
+                </ul>
+                <ul class="hotel-info__contacts-list">
+                    <li class="hotel-info__contacts-item">
+                        <a href="" class="contacts-item__social">
+                            <svg class="contacts-item__icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path fill="currentColor" d="M448 80v352c0 26.5-21.5 48-48 48h-85.3V302.8h60.6l8.7-67.6h-69.3V192c0-19.6 5.4-32.9 33.5-32.9H384V98.7c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9H184v67.6h60.9V480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="hotel-info__contacts-item">
+                        <a href="" class="contacts-item__social">
+                            <svg class="contacts-item__icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="hotel-info__contacts-item">
+                        <a href="" class="contacts-item__social">
+                            <svg class="contacts-item__icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="hotel-info__contacts-item">
+                        <a href="" class="contacts-item__social">
+                            <svg class="contacts-item__icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path fill="currentColor" d="M186.8 202.1l95.2 54.1-95.2 54.1V202.1zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-42 176.3s0-59.6-7.6-88.2c-4.2-15.8-16.5-28.2-32.2-32.4C337.9 128 224 128 224 128s-113.9 0-142.2 7.7c-15.7 4.2-28 16.6-32.2 32.4-7.6 28.5-7.6 88.2-7.6 88.2s0 59.6 7.6 88.2c4.2 15.8 16.5 27.7 32.2 31.9C110.1 384 224 384 224 384s113.9 0 142.2-7.7c15.7-4.2 28-16.1 32.2-31.9 7.6-28.5 7.6-88.1 7.6-88.1z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Info -->
+    <section class="additional-info">
+        <div class="container">
+            <div class="features__section">
+                <h1>
+                    The Show Is About To Begin
+                </h1>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui nihil cupiditate autem, quos numquam reiciendis illum? Nostrum delectus voluptate tenetur nemo dolorem iusto officiis, perferendis quasi, rem dolores, amet saepe libero reiciendis rerum id totam praesentium consequuntur labore. Culpa error, iure molestias voluptas fuga neque eius dolorem dicta sunt explicabo.
+                </p>
+                <h3>
+                    Exclusive Experiences & Amenities
+                </h3>
+                <div class="features__container">
+                    <div class="features__groups">
+                        <ul>
+                            <li class="features__item">300 smart rooms and suites</li>
+                            <li class="features__item">Sleep Like never before</li>
+                            <li class="features__item">Inhouse Spa</li>
+                        </ul>
+                        <ul>
+                            <li class="features__item">Body Fitness Center</li>
+                            <li class="features__item">Shop</li>
+                            <li class="features__item">@Biz Business Center</li>
+                        </ul>
+                        <ul>
+                            <li class="features__item">Infinity pool with 360º views</li>
+                            <li class="features__item">Exclusive bathroom amenities</li>
+                            <li class="features__item">Rooftop Lounge</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specials + mini-couresl -->
+    <section class="specials">
+        <div class="specials__header">
+            <h3>Specials & Promotions</h3>
+        </div>
+        <div class="mini-carousel">
+            <ul class="mini-carousel__container">
+                <div class="mini-carousel__controls">
+                    <span class="mini-carousel__controls-item" id="previous-mini"></span>
+                    <span class="mini-carousel__controls-item" id="next-mini"></span>
+                </div>
+                <li class="mini-carousel__item active">
+                    <div class="mini-carousel__item-image"></div>
+                    <div class="mini-carousel__item-content">
+                        <h3>Sound Of Your Stay</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae animi qui sequi accusamus inventore nam quisquam voluptas, odit unde dolorem ut cumque, perferendis, a praesentium expedita. Corporis, iusto quae exercitationem expedita cupiditate, dicta sint eveniet ad, repellendus ipsa temporibus facere.</p>
+                        <a href="">More</a>
+                    </div>
+                </li>
+                <li class="mini-carousel__item">
+                    <div class="mini-carousel__item-image"></div>
+                    <div class="mini-carousel__item-content">
+                        <h3>Vision Of Your Stay</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae animi qui sequi accusamus inventore nam quisquam voluptas, odit unde dolorem ut cumque, perferendis, a praesentium expedita. Corporis, iusto quae exercitationem expedita cupiditate, dicta sint eveniet ad, repellendus ipsa temporibus facere.</p>
+                        <a href="">More</a>
+                    </div>
+                </li>
+                <li class="mini-carousel__item">
+                    <div class="mini-carousel__item-image"></div>
+                    <div class="mini-carousel__item-content">
+                         <h3>Taste Of Your Stay</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae animi qui sequi accusamus inventore nam quisquam voluptas, odit unde dolorem ut cumque, perferendis, a praesentium expedita. Corporis, iusto quae exercitationem expedita cupiditate, dicta sint eveniet ad, repellendus ipsa temporibus facere.</p>
+                        <a href="">More</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Explore Gallery -->
+    <section class="explore-gallery">
+        <div class="explore-gallery__header">
+            <h2>
+                <a href="html/gallery.html">Explore Our Gallery</a> 
+            </h2>
+        </div>
+        <div class="explore-gallery__body">
+            <a href="" class="explore-gallery__item">
+                <div class="explore-gallery__item-background">
+                    <div class="explore-gallery__item-info">
+                        <h3>Lorem, ipsum dolor</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, veniam!</p>
+                    </div>
+                </div>  
+            </a>
+            <a href="" class="explore-gallery__item">
+                <div class="explore-gallery__item-background">
+                    <div class="explore-gallery__item-info">
+                        <h3>Lorem, ipsum dolor</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, veniam!</p>
+                    </div>
+                </div>  
+            </a>
+            <a href="" class="explore-gallery__item">
+                <div class="explore-gallery__item-background">
+                    <div class="explore-gallery__item-info">
+                        <h3>Lorem, ipsum dolor</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, veniam!</p>
+                    </div>
+                </div>  
+            </a>
+            <a href="" class="explore-gallery__item">
+                <div class="explore-gallery__item-background">
+                    <div class="explore-gallery__item-info">
+                        <h3>Lorem, ipsum dolor</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, veniam!</p>
+                    </div>
+                </div>  
+            </a>
+            <a href="" class="explore-gallery__item">
+                <div class="explore-gallery__item-background">
+                    <div class="explore-gallery__item-info">
+                        <h3>Lorem, ipsum dolor</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, veniam!</p>
+                    </div>
+                </div>  
+            </a>
+        </div>
+    </section>
+
+    <!-- Subscribe -->
+    <section class="subscribe">
+        <div class="subscribe__container">
+            <div class="subscribe__item">
+                <div class="subscribe__item-logo">
+                    <img src="assets/img/logo.png" alt="hotel_logo">
+                </div>
+                <div class="subscribe__item-address">
+                    <span>Leisure Hotel</span>
+                    <span>Av.Green L.City</span>
+                    <span>33251, County, Region</span>
+                    <span>03030 Country</span>
+                </div>
+            </div>
+            <div class="subscribe__item">
+                <div class="subscribe__item-link">
+                    <a href="callto:38-050-555-22-22">38-050-555-22-22</a>
+                    <span>(Contact)</span>
+                </div>
+                <div class="subscribe__item-link">
+                    <a href="callto:38-050-555-22-22">38-050-555-22-22</a>
+                    <span>(Commutator)</span>
+                </div>
+                <div class="subscribe__item-link">
+                    <a href="mailto:reservations@hotel.com">reservations@hotel.com</a>
+                </div>
+                
+            </div>
+            <div class="subscribe__item">
+                <h3>Sign Up For Specials</h3>
+                <input id="subscribeInput" type="email">
+                <button id="subscribe">Subsribe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__link-container" id="test">
+                <div class="footer__link-column">
+                    <a href="" class="footer__link">Accomodations</a>
+                </div>
+                <div class="footer__link-column">
+                    <a href="" class="footer__link">Restaurants</a>
+                </div>
+                <div class="footer__link-column">
+                    <a href="" class="footer__link">Events</a>
+                </div>
+                <div class="footer__link-column">
+                    <a href="" class="footer__link">Contact Us</a>
+                </div>
+                <div class="footer__link-column">
+                    <a href="" class="footer__link">Services</a>
+                </div>
+                <div class="footer__link-column">
+                    <a href="" class="footer__link">Specials</a>
+                </div>
+            </div>
+            <div class="footer__legal">
+                <div class="footer__legal-links">
+                    <a href="">Privacy Policy</a>
+                    <a href="">Legal Disclaimer</a>
+                </div>
+                <div class="footer__copyright">
+                    Copyright © 2018 , Hotel Administration
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/all.js"></script>
+</body>
+</html>

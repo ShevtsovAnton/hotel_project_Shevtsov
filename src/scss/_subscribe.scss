@@ -1,0 +1,57 @@
+
+// Subscribe Section
+.subscribe {
+    background-color: #1d1d1e;
+    color: #a5a5a5;
+    padding: 15px 0;
+
+    & a {
+        text-decoration: none;
+        color: #dbb94b;
+    }
+
+    // ::after {
+    //     content:'';
+    //     display: block;
+    //     width: 100px;
+    // }
+}
+
+.subscribe__container {
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.subscribe__item {
+    border-right: 1px solid #a5a5a5;
+    padding-left: 20px;
+    flex: 1;
+
+    &:nth-child(1) {
+        display: flex;
+        flex-direction: row;
+
+        & img {
+            height: 100px;
+            width: 100px;
+            padding-right: 10px;
+        }
+    }
+
+    &:nth-child(1) span {
+        display: block;
+    }
+
+    &:nth-child(2) span {
+        display: inline-block;
+    }
+
+    &:nth-child(3) {
+        border-right: none;
+    }
+   
+}
