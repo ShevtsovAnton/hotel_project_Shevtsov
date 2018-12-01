@@ -52,11 +52,8 @@
         <nav class="main-nav">
             <div class="main-nav__wrapper">
                 <ul class="main-nav__list site-list">
-                    <li class="site-list__item site-list__item--active">
-                        <a href="">Main</a>
-                    </li>
                     <li class="site-list__item">
-                        <a href="">Accomodations</a>
+                        <a href="" class="main-nav__accomodations-link main-nav__link">Accomodations</a>
                         <ul class="site-list__dropdown-list">
                             <li class="site-list__subItem">
                                 <a href="">Room 1</a>
@@ -75,23 +72,26 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="site-list__item">
-                        <a href="">Services</a>
+                    <li class="site-list__item site-list__item--active">
+                        <a href="" class="main-nav__reataurants-link main-nav__link">Restaurants</a>
                     </li>
                     <li class="site-list__item">
-                        <a href="">Special Offers</a>
+                        <a href="" class="main-nav__services-link main-nav__link">Services</a>
                     </li>
                     <li class="site-list__item">
-                        <a href="">Contacts</a>
+                        <a href="" class="main-nav__offers-link main-nav__link">Special Offers</a>
+                    </li>
+                    <li class="site-list__item">
+                        <a href="" class="main-nav__contacts-link main-nav__link">Contacts</a>
                     </li>
                 </ul>
-                <a href="" role="button" id="bookNowButton">Book Now</a>
+                <a href="" role="button" id="bookNowButton main-nav__link">Book Now</a>
             </div>
         </nav>
     </header>
     
      <!-- CAROUSEL -->
-    <section class="carousel__wrapper">
+    <section class="carousel__wrapper" id="carouselSection">
         <div class="carousel__controls">
             <span class="carousel__controls-item" id="previous"></span>
             <span class="carousel__controls-item" id="next"></span>
@@ -106,7 +106,10 @@
     </section>
 
     <!--Hidden Accomodations -->
-    <section class="nav-item__container accomodations hidden">
+    <section class="nav-item__container accomodations hidden" id="accomodationsSection">
+        <div class="nav-item__image">
+            <img src="assets/img/gallery/pexels-photo-164595.jpeg" alt="">
+        </div>
         <div class="nav-item__header">
             <div class="nav-item__title">
                 <h3>Stylish</h3>
@@ -116,7 +119,7 @@
         <div class="breadcrumbs">
             <ul>
                 <li>
-                    <a href="">Home</a>
+                    <a href="" class="breadcrumbs__home-link">Home</a>
                 </li>
                 <li class="breadcrumbs__last-item">Accomodations</li>
             </ul>
@@ -130,7 +133,10 @@
     </section>
 
     <!-- Hidden Restaurants -->
-    <section class="nav-item__container restaurants hidden">
+    <section class="nav-item__container restaurants hidden" id="restaurantsSection">
+        <div class="nav-item__image">
+            <img src="assets/img/gallery/pexels-photo-1058277.jpeg" alt="">
+        </div>
         <div class="nav-item__header">
             <div class="nav-item__title">
                 <h3>Restaurants</h3>
@@ -140,7 +146,7 @@
         <div class="breadcrumbs">
             <ul>
                 <li>
-                    <a href="">Home</a>
+                    <a href="" class="breadcrumbs__home-link">Home</a>
                 </li>
                 <li class="breadcrumbs__last-item">Restaurants</li>
             </ul>
@@ -180,7 +186,10 @@
     </section>
 
      <!-- Hidden Services -->
-    <section class="nav-item__container services hidden">
+    <section class="nav-item__container services hidden" id="servicesSection">
+        <div class="nav-item__image">
+            <img src="assets/img/gallery/people-hotel-bar-drinks.jpg" alt="">
+        </div>
         <div class="nav-item__header">
             <div class="nav-item__title">
                 <h3>Services</h3>
@@ -190,7 +199,7 @@
         <div class="breadcrumbs">
             <ul>
                 <li>
-                    <a href="">Home</a>
+                    <a href="" class="breadcrumbs__home-link">Home</a>
                 </li>
                 <li class="breadcrumbs__last-item">Services & Facilities</li>
             </ul>
@@ -224,7 +233,10 @@
     </section>
 
     <!-- Hidden Special Offers -->
-    <section class="nav-item__container special-offers hidden">
+    <section class="nav-item__container special-offers hidden" id="specialOffersSection">
+        <div class="nav-item__image">
+            <img src="assets/img/pexels-photo-1368494.jpeg" alt="">
+        </div>
         <div class="nav-item__header">
             <div class="nav-item__title">
                 <h3>Special</h3>
@@ -234,7 +246,7 @@
         <div class="breadcrumbs">
             <ul>
                 <li>
-                    <a href="">Home</a>
+                    <a href="" class="breadcrumbs__home-link">Home</a>
                 </li>
                 <li class="breadcrumbs__last-item">Special Offers</li>
             </ul>
@@ -522,6 +534,8 @@
         </div>
     </footer>
 
-    <script src="js/all.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/burger.js"></script>
+    <script src="js/menu-items-navigation.js"></script>
 </body>
 </html>
