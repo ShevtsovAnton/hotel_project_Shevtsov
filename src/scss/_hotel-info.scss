@@ -35,11 +35,25 @@
     margin-right: 20px;
 }
 
+.hotel-info__contacts-item:hover a,
+.hotel-info__contacts-item:hover svg {
+    color: #ccc;
+    transition: all .5s ease;
+}
+
 .hotel-info__contacts-item svg {
     display: inline-block;
     height: 20px;
     width: 20px;
     color: white;
+}
+
+.hotel-info__contacts-icon {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    fill: white;
+    vertical-align: middle;
 }
 
 

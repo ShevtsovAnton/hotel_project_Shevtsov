@@ -20,6 +20,10 @@
     text-transform: uppercase;
     text-decoration: none;
     color: $prime-color;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .footer__legal {

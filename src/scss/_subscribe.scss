@@ -10,6 +10,10 @@
         color: #dbb94b;
     }
 
+    & a:hover {
+        text-decoration: underline;
+    }
+
     // ::after {
     //     content:'';
     //     display: block;
@@ -53,5 +57,26 @@
     &:nth-child(3) {
         border-right: none;
     }
-   
+
+    & input {
+        background: gray;
+        padding: 5px;
+        color: white;
+        border-color: black;
+        outline: none;
+    }
+
+    & button {
+        color: #c4c4c4;
+        border-color: #c4c4c4;
+        background: black;
+        padding: 5px 15px;
+        cursor: pointer;
+        transition: all 0.2s ease;  
+
+        &:hover {
+            background: gray;
+            color: black;
+        }
+    }
 }

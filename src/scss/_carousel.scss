@@ -83,15 +83,25 @@
   }
   
   #previous {
-    background-image: url("../assets/img/back.png");
+    background-image: url("../assets/img/arrow-back-black.png");
     background-repeat: no-repeat;
     background-size: contain;
+    transition: all 0.2s ease;
+  }
+
+  #previous:hover {
+    background-image: url("../assets/img/arrow-back-white.png");
   }
   
   #next {
-    background-image: url("../assets/img/next.png");
+    background-image: url("../assets/img/arrow-right-black.png");
     background-repeat: no-repeat;
     background-size: contain;
+    transition: all 0.2s ease;
+  } 
+
+  #next:hover {
+    background-image: url("../assets/img/arrow-right-white.png");
   } 
   
   

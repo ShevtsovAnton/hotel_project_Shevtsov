@@ -17,7 +17,7 @@ body {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background-color: gray;
+  background-color: rgba(17, 17, 17, 0.9);
   width: 100%;
   position: absolute;
   z-index: 21;
@@ -47,20 +47,23 @@ body {
   flex-direction: row;
   align-content: space-around;
   text-align: center;
-  margin: 0; }
+  margin: 0;
+  transition: all 0.2s ease; }
 
 .site-list__item {
-  border-right: 1px solid #000;
-  position: relative; }
+  border-right: 1px solid #dbb94b;
+  position: relative;
+  transition: all 0.2s ease; }
   .site-list__item:last-child {
     border: none; }
   .site-list__item a {
     display: block;
-    color: black;
+    color: #dbb94b;
     text-decoration: none;
-    padding: 20px 25px; }
+    padding: 20px 25px;
+    transition: all 0.2s ease; }
   .site-list__item:hover {
-    background-color: #5a5858; }
+    background-color: rgba(17, 17, 17, 0.9); }
   .site-list__item:hover > a {
     color: white; }
   .site-list__item:hover ul {
@@ -72,7 +75,7 @@ body {
   display: none;
   left: 0;
   right: 0;
-  background-color: rgba(148, 144, 144, 0.4); }
+  background-color: rgba(17, 17, 17, 0.9); }
 
 .site-list__dropdown-list li {
   list-style: none; }
@@ -175,14 +178,22 @@ body {
   opacity: 0.6; }
 
 #previous {
-  background-image: url("../assets/img/back.png");
+  background-image: url("../assets/img/arrow-back-black.png");
   background-repeat: no-repeat;
-  background-size: contain; }
+  background-size: contain;
+  transition: all 0.2s ease; }
+
+#previous:hover {
+  background-image: url("../assets/img/arrow-back-white.png"); }
 
 #next {
-  background-image: url("../assets/img/next.png");
+  background-image: url("../assets/img/arrow-right-black.png");
   background-repeat: no-repeat;
-  background-size: contain; }
+  background-size: contain;
+  transition: all 0.2s ease; }
+
+#next:hover {
+  background-image: url("../assets/img/arrow-right-white.png"); }
 
 .burger__icon {
   width: 25px; }
@@ -359,11 +370,23 @@ body {
   color: white;
   margin-right: 20px; }
 
+.hotel-info__contacts-item:hover a,
+.hotel-info__contacts-item:hover svg {
+  color: #ccc;
+  transition: all .5s ease; }
+
 .hotel-info__contacts-item svg {
   display: inline-block;
   height: 20px;
   width: 20px;
   color: white; }
+
+.hotel-info__contacts-icon {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  fill: white;
+  vertical-align: middle; }
 
 .contacts-item__social {
   display: inline-block;
@@ -478,7 +501,11 @@ body {
     margin-top: 20px;
     border: 2px solid #c4c4c4;
     text-decoration: none;
-    color: #fff; }
+    color: #fff;
+    transform: all 0.2 ease; }
+    .mini-carousel__item-content a:hover {
+      background: #c4c4c4;
+      color: black; }
 
 .mini-carousel__controls {
   width: 50%;
@@ -699,6 +726,8 @@ body {
   .subscribe a {
     text-decoration: none;
     color: #dbb94b; }
+  .subscribe a:hover {
+    text-decoration: underline; }
 
 .subscribe__container {
   width: 1170px;
@@ -725,6 +754,22 @@ body {
     display: inline-block; }
   .subscribe__item:nth-child(3) {
     border-right: none; }
+  .subscribe__item input {
+    background: gray;
+    padding: 5px;
+    color: white;
+    border-color: black;
+    outline: none; }
+  .subscribe__item button {
+    color: #c4c4c4;
+    border-color: #c4c4c4;
+    background: black;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: all 0.2s ease; }
+    .subscribe__item button:hover {
+      background: gray;
+      color: black; }
 
 .footer {
   background: #000;
@@ -744,6 +789,8 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: #6f6ab2; }
+  .footer__link:hover {
+    text-decoration: underline; }
 
 .footer__legal {
   display: flex;
