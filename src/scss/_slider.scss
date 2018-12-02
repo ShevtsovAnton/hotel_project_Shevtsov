@@ -1,15 +1,4 @@
-body {
-    margin: 0;
-    padding: 0;
-}
-
-.slide__container {
-    display: flex;
-    flex-direction: row;
-    width: 100%; 
-}
-
-.container {
+.slider__container {
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -21,14 +10,17 @@ body {
     top: 0;
     left: 0;
     width: 500%;
-    // height: 100vh;
     height: 100%;
     display: flex;
     flex-direction: row;
     transition: all 1s ease;
 }
 
-
+.slide__container {
+    display: flex;
+    flex-direction: row;
+    width: 100%; 
+}
 
 .caption {
     width: 50%;
@@ -124,7 +116,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    .container {
+    .slider__container {
         height: 640px;
     }
 
@@ -133,7 +125,7 @@ body {
     }
 
     .slide {
-        height: 50%; //!!!!!!adaptive
+        height: 50%;
         width: 100%;
     }
 
