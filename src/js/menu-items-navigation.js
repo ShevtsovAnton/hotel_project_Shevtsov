@@ -8,14 +8,18 @@ const accomodationsLink = document.querySelector(".main-nav__accomodations-link"
 const restaurantsLink = document.querySelector(".main-nav__reataurants-link");
 const servicesLink = document.querySelector(".main-nav__services-link");
 const offersLink = document.querySelector(".main-nav__offers-link");
-const contactsLink = document.querySelector(".main-nav__contacts-link");
-const homeLinks = document.querySelectorAll(".main-nav__contacts-link");
+const homeLinks = document.querySelectorAll(".breadcrumbs__home-link");
+const additionalInfo = document.querySelector(".additional-info");
+const hotelInfo = document.querySelector(".hotel-info");
 
-function hideCarousel() {
+function hideHomePageSections() {
     if (!(carouselSection.classList.contains('hidden'))) {
         carouselSection.classList.add('hidden');
+        additionalInfo.classList.add('hidden');
+        hotelInfo.classList.add('hidden');
     } 
 } 
+
 
 function removeHiddenClass(element) {
     for (i = 0; i < navItems.length; i++) {
@@ -28,7 +32,7 @@ function removeHiddenClass(element) {
 
 function displayMenuSection(event, element) {
     event.preventDefault();
-    hideCarousel()
+    hideHomePageSections();
     removeHiddenClass(element);
 }
 
@@ -57,9 +61,16 @@ for (i = 0; i < homeLinks.length; i++) {
                 navItems[i].classList.add('hidden');
             }
             if (carouselSection.classList.contains('hidden')) {
-            carouselSection.classList.remove('hidden');
+                carouselSection.classList.remove('hidden');
+            }
+            if (additionalInfo.classList.contains('hidden')) {
+                additionalInfo.classList.remove('hidden');
+            }
+            if (hotelInfo.classList.contains('hidden')) {
+                hotelInfo.classList.remove('hidden');
             }
         }
+        window.scrollTo(0, 0);
     })
 }
 
