@@ -1,7 +1,7 @@
 .features__section {
-    max-width: 1170px;
+    max-width: 992px;
     margin: auto;
-    padding: 20px 0;
+    padding: 20px 10px;
 
     & h1, h3 {
         text-transform: uppercase;
@@ -46,4 +46,35 @@
         background-repeat: no-repeat;
         vertical-align: -10%;
     }
+}
+
+@media (max-width: 992px) {
+
+    .features__section {
+        padding: 20px 10px;
+    }
+
+    .features__groups::after {
+            // display: none;
+            width: 10%;
+        }
+}
+
+@media (max-width: 768px) {
+
+    .features__groups {
+        flex-direction: column;
+
+        & ul {
+            margin: 0;
+        }
+    }
+
+    .features__groups::after {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+
 }

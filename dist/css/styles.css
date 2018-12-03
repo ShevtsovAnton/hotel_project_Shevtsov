@@ -438,9 +438,9 @@ body {
     margin: 5px 0; } }
 
 .features__section {
-  max-width: 1170px;
+  max-width: 992px;
   margin: auto;
-  padding: 20px 0; }
+  padding: 20px 10px; }
   .features__section h1, .features__section h3 {
     text-transform: uppercase; }
   .features__section h3 {
@@ -471,6 +471,20 @@ body {
   background-image: url("../assets/img/angle-right.svg");
   background-repeat: no-repeat;
   vertical-align: -10%; }
+
+@media (max-width: 992px) {
+  .features__section {
+    padding: 20px 10px; }
+  .features__groups::after {
+    width: 10%; } }
+
+@media (max-width: 768px) {
+  .features__groups {
+    flex-direction: column; }
+    .features__groups ul {
+      margin: 0; }
+  .features__groups::after {
+    display: none; } }
 
 .specials__header {
   background-color: #6f6ab2;
