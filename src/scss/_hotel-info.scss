@@ -79,7 +79,7 @@
         flex-direction: column;
     }
 
-    .hotel-info__contacts-list {
+    .hotel-info__contacts-list:nth-child(2) {
         justify-content: center;
     }
 }
