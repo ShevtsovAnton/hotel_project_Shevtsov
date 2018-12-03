@@ -561,13 +561,13 @@ body {
     transition: all 0.5s ease; }
   .slide .slide__previous {
     left: 20px;
-    background-image: url("../assets/img/arrow-back-black.png");
+    background-image: url("../assets/img/arrow-left-gray.png");
     background-size: contain; }
     .slide .slide__previous:hover {
       background-image: url("../assets/img/arrow-back-white.png"); }
   .slide .slide__next {
     right: 20px;
-    background-image: url("../assets/img/arrow-right-black.png");
+    background-image: url("../assets/img/arrow-right-gray.png");
     background-size: contain; }
     .slide .slide__next:hover {
       background-image: url("../assets/img/arrow-right-white.png"); }

@@ -70,7 +70,8 @@
 
     & .slide__previous {
         left: 20px;
-        background-image: url("../assets/img/arrow-back-black.png");
+        // background-image: url("../assets/img/arrow-back-black.png");
+        background-image: url("../assets/img/arrow-left-gray.png");
         background-size: contain;
         
 
@@ -81,7 +82,8 @@
 
     & .slide__next {
         right: 20px;
-        background-image: url("../assets/img/arrow-right-black.png");
+        // background-image: url("../assets/img/arrow-right-black.png");
+        background-image: url("../assets/img/arrow-right-gray.png");
         background-size: contain;
 
         &:hover {
