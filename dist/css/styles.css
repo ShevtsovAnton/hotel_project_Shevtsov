@@ -306,7 +306,7 @@ body {
   z-index: 40; }
 
 .nav-item__title {
-  width: 1170px;
+  max-width: 992px;
   margin: 0 auto;
   padding: 20px 0; }
   .nav-item__title h3, .nav-item__title h2 {
@@ -316,7 +316,7 @@ body {
     margin: 0; }
 
 .nav-item__body {
-  width: 1170px;
+  max-width: 992px;
   margin: 0 auto; }
 
 .nav-item__content-lists {
@@ -332,11 +332,16 @@ body {
     height: 100%;
     object-fit: cover; }
 
+@media (max-width: 992px) {
+  .nav-item__body {
+    width: auto;
+    padding: 20px 10px; } }
+
 .breadcrumbs {
   background: #ececec;
   padding: 10px 0; }
   .breadcrumbs ul {
-    width: 1170px;
+    max-width: 992px;
     list-style: none;
     display: flex;
     flex-direction: row;

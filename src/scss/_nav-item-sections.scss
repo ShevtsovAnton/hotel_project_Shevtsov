@@ -14,7 +14,7 @@
 }
 
 .nav-item__title {
-    width: 1170px;
+    max-width: 992px;
     margin: 0 auto;
     padding: 20px 0;
     
@@ -28,7 +28,7 @@
 }
 
 .nav-item__body {
-    width: 1170px;
+    max-width: 992px;
     margin: 0 auto;
 }
 
@@ -47,4 +47,14 @@
         height: 100%;
         object-fit: cover;
     }
+}
+
+@media (max-width: 992px) {
+
+
+    .nav-item__body {
+        width: auto;
+        padding: 20px 10px;
+    }
+
 }
