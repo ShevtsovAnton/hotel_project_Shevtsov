@@ -107,6 +107,10 @@ body {
     justify-content: space-around;
     padding: 0 20px; } }
 
+@media (max-width: 576px) {
+  .page-header__logo {
+    display: none; } }
+
 /*Slideshow settings*/
 .carousel__container {
   position: relative;
