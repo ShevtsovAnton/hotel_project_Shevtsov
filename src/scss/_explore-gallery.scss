@@ -66,6 +66,7 @@
 
     &:hover .explore-gallery__item-info {
         display: block;
+        margin: 0 auto;
     }
 }
 
@@ -80,3 +81,14 @@
 }
 
 
+@media (max-width: 768px) {
+    .explore-gallery__body {
+        // display: none;
+        flex-direction: column;
+    }
+
+    .explore-gallery__item {
+        height: 160x;
+        width: 100%;
+    }
+}

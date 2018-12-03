@@ -641,7 +641,8 @@ body {
   .explore-gallery__item:hover .explore-gallery__item-background {
     background: #6f6ab2; }
   .explore-gallery__item:hover .explore-gallery__item-info {
-    display: block; }
+    display: block;
+    margin: 0 auto; }
 
 .explore-gallery__item-background {
   height: 100%;
@@ -650,6 +651,13 @@ body {
 
 .explore-gallery__item-info {
   align-self: center; }
+
+@media (max-width: 768px) {
+  .explore-gallery__body {
+    flex-direction: column; }
+  .explore-gallery__item {
+    height: 160x;
+    width: 100%; } }
 
 /* gallery */
 .displayIt {
