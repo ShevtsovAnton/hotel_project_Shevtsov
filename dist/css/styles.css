@@ -813,11 +813,21 @@ body {
   flex: 1; }
   .subscribe__item:nth-child(1) {
     display: flex;
-    flex-direction: row; }
+    flex-direction: row;
+    align-content: center;
+    margin: 0 auto; }
+    .subscribe__item:nth-child(1) .subscribe__item-logo {
+      align-self: center; }
+    .subscribe__item:nth-child(1) .subscribe__item-address {
+      align-self: center; }
     .subscribe__item:nth-child(1) img {
       height: 100px;
       width: 100px;
       padding-right: 10px; }
+  .subscribe__item:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
   .subscribe__item:nth-child(1) span {
     display: block; }
   .subscribe__item:nth-child(2) span {
