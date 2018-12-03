@@ -3,7 +3,8 @@
 }
 
 .hotel-info__container {
-    width: 1140px;
+    // width: 1140px;
+    width: 992px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -65,4 +66,32 @@
 
 .contacts-item__icon {
     vertical-align: text-bottom;
+}
+
+@media (max-width: 992px) {
+
+    .hotel-info__container {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .contacts__container {
+        flex-direction: column;
+    }
+
+    .hotel-info__contacts-list {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hotel-info__contacts-list:first-child {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .hotel-info__contacts-item {
+        text-align: center;
+        margin: 5px 0;
+    }
 }

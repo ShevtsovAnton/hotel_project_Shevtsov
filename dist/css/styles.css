@@ -102,6 +102,11 @@ body {
   #bookNowButton:hover {
     background: #dbb94bb9; }
 
+@media (max-width: 992px) {
+  .page-header {
+    justify-content: space-around;
+    padding: 0 20px; } }
+
 /*Slideshow settings*/
 .carousel__container {
   position: relative;
@@ -195,6 +200,9 @@ body {
 #next:hover {
   background-image: url("../assets/img/arrow-right-white.png"); }
 
+.burger__container {
+  display: none; }
+
 .burger__icon {
   width: 25px; }
 
@@ -279,6 +287,13 @@ body {
 .burger__menu[aria-expanded="true"] + .burger__backdrop {
   position: fixed; }
 
+@media (max-width: 992px) {
+  .burger__container {
+    display: block;
+    padding-top: 10px; }
+  .main-nav__list {
+    display: none; } }
+
 .nav-item__container {
   position: relative; }
 
@@ -352,7 +367,7 @@ body {
   background-color: #6f6ab2; }
 
 .hotel-info__container {
-  width: 1140px;
+  width: 992px;
   display: flex;
   flex-direction: column;
   margin: 0 auto; }
@@ -404,6 +419,23 @@ body {
 
 .contacts-item__icon {
   vertical-align: text-bottom; }
+
+@media (max-width: 992px) {
+  .hotel-info__container {
+    width: 100%;
+    flex-direction: column; }
+  .contacts__container {
+    flex-direction: column; }
+  .hotel-info__contacts-list {
+    justify-content: center; } }
+
+@media (max-width: 768px) {
+  .hotel-info__contacts-list:first-child {
+    flex-direction: column;
+    margin: 0; }
+  .hotel-info__contacts-item {
+    text-align: center;
+    margin: 5px 0; } }
 
 .features__section {
   max-width: 1170px;
