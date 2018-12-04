@@ -148,8 +148,14 @@
     background: white;
 }
 
+@media (max-width: 1200px) {
+    
+    .gallery__container {
+        padding-top: 200px;
+        width: auto;
+        margin: 0 auto; 
+    }
 
-
-
+}
 
 
