@@ -1,0 +1,61 @@
+.room-card__container {
+    display: flex;
+    flex-direction: row;
+    margin: 40px auto;;
+}
+
+.room-card__picture  {
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 60%;
+}
+
+.room-deluxe {
+    background-image: url("../assets/img/room-lux.jpeg");
+    background-position: center;
+}
+
+.room-standart {
+    background-image: url("../assets/img/room-standart.jpeg");
+    background-position: center;
+}
+
+.room-economy {
+    background-image: url("../assets/img/room-econom.jpeg");
+    background-position: center;
+}
+
+.room-card__description {
+    padding: 30px;
+    background: #eee;
+
+    & h3 {
+        margin: 0;
+        text-transform: uppercase;
+        color: $prime-color
+    }
+}
+
+.room-card__footer {
+    background: #424242;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.room-card__size-info {
+    display: flex;
+    flex-direction: column;
+
+    & span {
+        color: white;
+        text-align: center;
+    }
+    
+    & span:first-child {
+        font-size: 0.8rem;
+    }
+}

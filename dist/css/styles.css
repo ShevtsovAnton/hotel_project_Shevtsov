@@ -87,7 +87,8 @@ body {
   .site-list__dropdown-list li:hover a {
     color: white; }
 
-#bookNowButton {
+#bookNowButton,
+.bookNowButton {
   text-decoration: none;
   display: inline-block;
   color: white;
@@ -99,7 +100,8 @@ body {
   border: 2px solid #dbb94b;
   line-height: 60px;
   text-align: center; }
-  #bookNowButton:hover {
+  #bookNowButton:hover,
+  .bookNowButton:hover {
     background: #dbb94bb9; }
 
 @media (max-width: 992px) {
@@ -340,6 +342,54 @@ body {
   .nav-item__body {
     width: auto;
     padding: 20px 10px; } }
+
+.room-card__container {
+  display: flex;
+  flex-direction: row;
+  margin: 40px auto; }
+
+.room-card__picture {
+  object-fit: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 60%; }
+
+.room-deluxe {
+  background-image: url("../assets/img/room-lux.jpeg");
+  background-position: center; }
+
+.room-standart {
+  background-image: url("../assets/img/room-standart.jpeg");
+  background-position: center; }
+
+.room-economy {
+  background-image: url("../assets/img/room-econom.jpeg");
+  background-position: center; }
+
+.room-card__description {
+  padding: 30px;
+  background: #eee; }
+  .room-card__description h3 {
+    margin: 0;
+    text-transform: uppercase;
+    color: #6f6ab2; }
+
+.room-card__footer {
+  background: #424242;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.room-card__size-info {
+  display: flex;
+  flex-direction: column; }
+  .room-card__size-info span {
+    color: white;
+    text-align: center; }
+  .room-card__size-info span:first-child {
+    font-size: 0.8rem; }
 
 .breadcrumbs {
   background: #ececec;
