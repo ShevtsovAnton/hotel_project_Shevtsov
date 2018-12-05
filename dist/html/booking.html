@@ -58,26 +58,34 @@
     <!-- booking form -->
     <div class="booking-form__container">
         <form action="" id="bookingForm">
-            <label for="booking__firstName">Room Id
-                <input type="number" name="booking__roomId" id="booking-roomId" value="1">
+            <label for="booking__roomType">Room Type
+                <!-- <input type="number" name="booking__roomId" id="booking-roomId" value="1"> -->
+                <select name="booking__roomType" id="booking__roomType" class="booking-form__item">
+                    <option value="1">Standart Room</option>
+                    <option value="2">Economy Room</option>
+                    <option value="3">Deluxe Room</option>
+                </select>
             </label>
-            <label for="booking__firstName">First Name
-                <input type="text" name="booking__firstName" id="booking-firstName">
+            <!-- <label for="booking__firstName">First Name
+                <input type="text" name="booking__firstName" id="booking-firstName" class="booking-form__item">
             </label>
             <label for="booking__lastName">Last Name
-                <input type="text" name="booking__lastName" id="booking-lastName">
+                <input type="text" name="booking__lastName" id="booking-lastName" class="booking-form__item">
+            </label> -->
+            <label for="booking__fullName">Full Name
+                <input type="text" name="booking__fullName" id="booking-fullName" class="booking-form__item">
             </label>
             <label for="booking__arivalDate">Arrival Date
-                <input type="date" name="booking__arivalDate" id="booking-arivalDate">
+                <input type="date" name="booking__arivalDate" id="booking-arivalDate" class="booking-form__item">
             </label>
             <label for="booking__departureDate">Departure Date
-                <input type="date" name="booking__departureDate" id="booking-departureDate">
+                <input type="date" name="booking__departureDate" id="booking-departureDate" class="booking-form__item">
             </label>
-            <label for="booking__nights">Nights
-                <output id="numberOfNights">00</output>
-            </label>
+            <!-- <label for="booking__nights">Nights
+                <output id="numberOfNights">00</output class="booking-form__item">
+            </label> -->
             <label for="booking__guests">Guests
-                <select name="booking__guests" id="booking-guests">
+                <select name="booking__guests" id="booking-guests" class="booking-form__item">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -85,16 +93,16 @@
                 </select>
             </label>
              <label for="booking__email">Email
-                <input name="booking__email" id="booking-email" type="email">
+                <input name="booking__email" id="booking-email" type="email" class="booking-form__item">
             </label>
              <label for="booking__phone">Phone
-                <input name="booking__phone" id="booking-phone" type="tel">
+                <input name="booking__phone" id="booking-phone" type="tel" class="booking-form__item">
             </label>
-            <button type="submit"id="booking-submitButton">Submit</button>
+            <button type="submit"id="booking-submitButton">Book</button>
         </form>
     </div>
 
-    <div class="checkBookingForm__container">
+    <!-- <div class="checkBookingForm__container">
         <form action="" id="bookingForm">
             <label for="checkBooking__number">Booking Number
                 <input type="number" name="checkBooking__number" id="checkBooking-number">
@@ -104,7 +112,7 @@
             </label>
             <button type="submit" id="checkBooking-submitButton">Submit</button>
         </form>
-    </div>
+    </div> -->
 
     <div id="displayBookingInfo">
 

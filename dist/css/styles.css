@@ -1020,10 +1020,40 @@ body {
     align-items: center; } }
 
 .booking-form__container {
-  margin: 0 auto;
-  width: 1170px; }
-  .booking-form__container input, .booking-form__container output, .booking-form__container button {
-    display: block; }
+  height: 100%; }
 
-#displayBookingInfo span {
-  display: block; }
+#bookingForm {
+  width: 500px;
+  margin: auto;
+  padding: 25px;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black; }
+  #bookingForm label {
+    margin-bottom: 10px; }
+
+.booking-form__item {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5%;
+  background-color: #eee; }
+
+#booking__roomType,
+#booking-guests {
+  height: 30px; }
+
+#booking-submitButton {
+  text-transform: uppercase;
+  font-size: 2rem;
+  vertical-align: middle;
+  height: 60px;
+  width: 150px;
+  color: #dbb94b;
+  border: 2px solid #dbb94b;
+  text-align: center;
+  cursor: pointer;
+  align-self: flex-end; }
+  #booking-submitButton:hover {
+    background: #dbb94bb9;
+    color: white; }
