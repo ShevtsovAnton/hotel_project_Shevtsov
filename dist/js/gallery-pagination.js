@@ -116,8 +116,8 @@ galleryItemsArray = document.querySelectorAll('.image-box');
 totalItems = document.querySelectorAll('.image-box').length;
 totalPages = Math.floor( totalItems / itemsPerPage);
 
-galleryPagination.setPages(totalPages);
 
+galleryPagination.setPages(totalPages);
 galleryPagination.init(1, totalPages);
 
 // currentPage = document.querySelector('.pagination-item.active').getAttribute('data-page');
@@ -136,7 +136,7 @@ function listenToTheClick() {
             let endIndex = currentPage * itemsPerPage + itemsPerPage - 1;
 
             for (let i = 0; i < galleryItemsArray.length; i++) {
-                if ((i < beginIndex) || (i > endIndex)) {
+                if ((i <= beginIndex) || (i >= endIndex)) {
                     if (galleryItemsArray[i].classList.contains('displayIt')) {
                         galleryItemsArray[i].classList.remove('displayIt');
                         galleryItemsArray[i].classList.add('dontDisplayIt');
