@@ -58,12 +58,13 @@
     <!-- booking form -->
     <div class="booking-form__container">
         <form action="" id="bookingForm">
+            <h2>Make a Reservation</h2>
             <label for="booking__roomType">Room Type
                 <!-- <input type="number" name="booking__roomId" id="booking-roomId" value="1"> -->
                 <select name="booking__roomType" id="booking__roomType" class="booking-form__item">
-                    <option value="1">Standart Room</option>
-                    <option value="2">Economy Room</option>
-                    <option value="3">Deluxe Room</option>
+                    <option value="Standart">Standart Room</option>
+                    <option value="Economy">Economy Room</option>
+                    <option value="Deluxe">Deluxe Room</option>
                 </select>
             </label>
             <!-- <label for="booking__firstName">First Name
@@ -104,11 +105,12 @@
 
     <div class="checkBookingForm__container">
         <form action="" id="bookingForm">
+            <h2>Check Your Booking Information</h2>
             <label for="checkBooking__number">Booking Number
-                <input type="number" name="checkBooking__number" id="checkBooking-number">
+                <input type="number" name="checkBooking__number" id="checkBooking-number" class="booking-form__item">
             </label>
             <label for="checkBooking__email">Email
-                <input type="email" name="checkBooking__email" id="checkBooking-email">
+                <input type="email" name="checkBooking__email" id="checkBooking-email" class="booking-form__item">
             </label>
             <button type="submit" id="checkBooking-submitButton">Submit</button>
         </form>

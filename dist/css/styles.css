@@ -9,6 +9,9 @@ body {
   padding: 0;
   line-height: 1.618; }
 
+body.modal-open {
+  overflow: hidden; }
+
 .hidden {
   display: none; }
 
@@ -147,27 +150,27 @@ body {
   color: #fff; }
 
 .carousel__item:nth-of-type(1) {
-  background: url("../assets/img/pexels-photo-1097439.jpeg") no-repeat;
+  background: url("../assets/img/carousel/pexels-photo-1097439.jpg") no-repeat;
   background-size: cover;
   background-position: center; }
 
 .carousel__item:nth-of-type(2) {
-  background: url("../assets/img/pexels-photo-189293.jpeg") no-repeat;
+  background: url("../assets/img/carousel/pexels-photo-189293.jpg") no-repeat;
   background-size: cover;
   background-position: center; }
 
 .carousel__item:nth-of-type(3) {
-  background: url("../assets/img/pexels-photo-271672.jpeg") no-repeat;
+  background: url("../assets/img/carousel/pexels-photo-271672.jpg") no-repeat;
   background-size: cover;
   background-position: center; }
 
 .carousel__item:nth-of-type(4) {
-  background: url("../assets/img/pexels-photo-279746.jpeg") no-repeat;
+  background: url("../assets/img/carousel/pexels-photo-279746.jpg") no-repeat;
   background-size: cover;
   background-position: center; }
 
 .carousel__item:nth-of-type(5) {
-  background: url("../assets/img/pexels-photo-279813.jpeg") no-repeat;
+  background: url("../assets/img/carousel/pexels-photo-279813.jpg") no-repeat;
   background-size: cover;
   background-position: center; }
 
@@ -622,19 +625,19 @@ body {
     .slide .slide__next:hover {
       background-image: url("../assets/img/arrow-right-white.png"); }
   .slide.slide1 {
-    background: url("../assets/img/sound_m.jpeg");
+    background: url("../assets/img/slider/sound.jpeg");
     background-size: cover;
     background-position: center; }
   .slide.slide2 {
-    background: url("../assets/img/vision.jpg");
+    background: url("../assets/img/slider/vision.jpeg");
     background-size: cover;
     background-position: center; }
   .slide.slide3 {
-    background: url("../assets/img/taste.jpg");
+    background: url("../assets/img/slider/taste.jpeg");
     background-size: cover;
     background-position: center; }
   .slide.slide4 {
-    background: url("../../dist/assets/img/gallery/pexels-photo-262047.jpeg");
+    background: url("../assets/img/slider/deals.jpeg");
     background-size: cover;
     background-position: center; }
 
@@ -683,15 +686,15 @@ body {
   background-position: center;
   color: white; }
   .explore-gallery__item:nth-child(1) {
-    background-image: url("../assets/img/pexels-photo-189293.jpeg"); }
+    background-image: url("../assets/img/gallery/villa-cortine-palace-949547_1920.jpg"); }
   .explore-gallery__item:nth-child(2) {
-    background-image: url("../assets/img/pexels-photo-271672.jpeg"); }
+    background-image: url("../assets/img/gallery/bar-1869656_1920.jpg"); }
   .explore-gallery__item:nth-child(3) {
-    background-image: url("../assets/img/pexels-photo-279746.jpeg"); }
+    background-image: url("../assets/img/gallery/exclusive-banquet-1812772_1920.jpg"); }
   .explore-gallery__item:nth-child(4) {
-    background-image: url("../assets/img/pexels-photo-279813.jpeg"); }
+    background-image: url("../assets/img/gallery/pexels-photo-1058277.jpg"); }
   .explore-gallery__item:nth-child(5) {
-    background-image: url("../assets/img/pexels-photo-1097439.jpeg"); }
+    background-image: url("../assets/img/gallery/pexels-photo-210604.jpg"); }
   .explore-gallery__item:hover .explore-gallery__item-background {
     background: #6f6ab2; }
   .explore-gallery__item:hover .explore-gallery__item-info {
@@ -1019,9 +1022,6 @@ body {
     flex-direction: column;
     align-items: center; } }
 
-.booking-form__container {
-  height: 100%; }
-
 #bookingForm {
   width: 500px;
   margin: auto;
@@ -1029,7 +1029,7 @@ body {
   vertical-align: middle;
   display: flex;
   flex-direction: column;
-  border: 1px solid black; }
+  background: white; }
   #bookingForm label {
     margin-bottom: 10px; }
 
@@ -1043,17 +1043,116 @@ body {
 #booking-guests {
   height: 30px; }
 
-#booking-submitButton {
+#booking-submitButton,
+#checkBooking-submitButton {
   text-transform: uppercase;
   font-size: 2rem;
   vertical-align: middle;
   height: 60px;
   width: 150px;
   color: #dbb94b;
+  background: rgba(80, 80, 80, 0.8);
   border: 2px solid #dbb94b;
   text-align: center;
   cursor: pointer;
   align-self: flex-end; }
-  #booking-submitButton:hover {
+  #booking-submitButton:hover,
+  #checkBooking-submitButton:hover {
     background: #dbb94bb9;
     color: white; }
+
+.checkBookingForm__container {
+  background: white; }
+
+@media (max-width: 576px) {
+  #bookingForm {
+    width: 300px; } }
+
+.general-container {
+  position: relative;
+  background: #505050;
+  width: 500px;
+  margin: 0 auto; }
+
+.tab__container {
+  position: relative;
+  display: flex;
+  margin: 0;
+  padding: 0; }
+
+input[type="radio"][name="tabs"] {
+  z-index: -1; }
+  input[type="radio"][name="tabs"]:checked + .tab__label .tab__content {
+    display: block; }
+  input[type="radio"][name="tabs"]:nth-of-type(1):checked ~ .tab__slide {
+    left: 0; }
+  input[type="radio"][name="tabs"]:nth-of-type(2):checked ~ .tab__slide {
+    left: 50%; }
+
+.tab__selector {
+  cursor: pointer;
+  color: #dbb94b;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 56px;
+  transition: color 0.2s ease;
+  width: 100%; }
+  .tab__selector:hover {
+    color: white; }
+
+.tab__slide {
+  background: #dbb94b;
+  width: 50%;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  top: calc(100% - 4px);
+  transition: left 0.3s ease-out; }
+
+.tab__label {
+  width: 100%; }
+  .tab__label .tab__content {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    display: none; }
+
+@media (max-width: 576px) {
+  .general-container {
+    width: 300px; } }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4); }
+
+.modal__content {
+  margin: 50px auto;
+  padding: 20px;
+  position: relative; }
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  font-size: 2rem;
+  font-weight: bold; }
+  .close:hover {
+    color: #c4c4c4;
+    text-decoration: none;
+    cursor: pointer; }
+
+.not-visible {
+  display: none; }

@@ -115,9 +115,12 @@ itemsPerPage = 6;
 galleryItemsArray = document.querySelectorAll('.image-box');
 totalItems = document.querySelectorAll('.image-box').length;
 totalPages = Math.floor( totalItems / itemsPerPage);
+
 galleryPagination.setPages(totalPages);
+
 galleryPagination.init(1, totalPages);
-currentPage = document.querySelector('.pagination-item.active').getAttribute('data-page');
+
+// currentPage = document.querySelector('.pagination-item.active').getAttribute('data-page');
     
 
 function listenToTheClick() {

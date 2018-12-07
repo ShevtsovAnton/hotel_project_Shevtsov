@@ -12,6 +12,10 @@ body {
   line-height: 1.618;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .hidden {
   display: none;
 }

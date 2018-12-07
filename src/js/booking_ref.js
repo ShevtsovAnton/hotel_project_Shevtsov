@@ -15,18 +15,18 @@ const bookingModule = (function () {
 
   //data
   const numberOfRooms = 3;
-  const roomRegistry = createEmptyArray();
+  // const roomRegistry = createEmptyArray();
   // const bookingInfo = [];
   const oneDay = 24 * 60 * 60 * 1000;
 
   //functions
-  function createEmptyArray() {
-    let array = [];
-    for (let i = 0; i < numberOfRooms; i++) {
-      array[i] = [];
-    }
-    return array
-  }
+  // function createEmptyArray() {
+  //   let array = [];
+  //   for (let i = 0; i < numberOfRooms; i++) {
+  //     array[i] = [];
+  //   }
+  //   return array
+  // }
 
   function generateBookingId() {
     let timestamp = (+new Date()).toString();
@@ -87,9 +87,9 @@ const bookingModule = (function () {
   }
 
 
-  function addBookingDatesToRoomRegistry(array) {
-    roomRegistry[roomType.value].push(...array);
-  }
+  // function addBookingDatesToRoomRegistry(array) {
+  //   roomRegistry[roomType.value].push(...array);
+  // }
 
 
   function saveBookingInfoToLocalStorage(array) {
@@ -119,7 +119,7 @@ const bookingModule = (function () {
     const bookingInfo = [];
     let bookingId = generateBookingId();
     let dates = getIndividualDates(new Date(arrivalDate.value), new Date(departureDate.value));
-    addBookingDatesToRoomRegistry(dates);
+    // addBookingDatesToRoomRegistry(dates);
     bookingInfo.push(addBookingInfoToArray(bookingId, dates));
     saveBookingInfoToLocalStorage(bookingInfo);
     // clearFormFields()
@@ -140,17 +140,7 @@ const bookingModule = (function () {
 
 }())
 
-
 bookingModule.init();
-
-
-
-
-
-
-
-
-
 
 
 
@@ -161,13 +151,14 @@ const checkBookingModule = (function () {
   const bookingNumberField = document.getElementById('checkBooking-number');
   const bookingEmailField = document.getElementById('checkBooking-email');
   const storedBookings = JSON.parse(localStorage.getItem('bookings'));
-  console.log('storedBookings='+storedBookings[0]);
   const submitButton = document.getElementById('checkBooking-submitButton');
 
 
   function checkBooking(event) {
     event.preventDefault();
-    let storedBookingInfo = storedBookings.filter( element => (element.bookingId === bookingNumberField.value));
+    // console.log(storedBookings);
+    let storedBookingInfo = storedBookings.filter( element => element.bookingId === bookingNumberField.value);
+    console.log(storedBookingInfo, storedBookingInfo[0].email);
     if (bookingEmailField.value === storedBookingInfo[0].email) {
       console.log('Booking info: ...');
       renderBookingInfo(storedBookingInfo[0]);
@@ -180,6 +171,9 @@ const checkBookingModule = (function () {
 
   function renderBookingInfo(booking) {
     const result = document.getElementById('displayBookingInfo');
+    while (result.firstChild) {
+      result.removeChild(result.firstChild);
+      }
     const keys = Object.keys(booking);
     keys.forEach(function (key) {
       let span = document.createElement("span");
