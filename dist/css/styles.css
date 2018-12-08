@@ -425,6 +425,58 @@ body.modal-open {
 .breadcrumbs__last-item {
   color: #6f6ab2; }
 
+#searchInput {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px; }
+
+.search__container {
+  position: relative; }
+  .search__container::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    background-image: url("../assets/img/search.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 5px;
+    z-index: 1; }
+
+.search-filter__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 992px;
+  margin: 5px auto 0; }
+  .search-filter__container .search__container {
+    flex-grow: 1; }
+  .search-filter__container .filter__container {
+    flex-grow: 1;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+
+.filter__title,
+.filter__item {
+  line-height: 40px; }
+
+@media (max-width: 992px) {
+  .search-filter__container {
+    flex-direction: column;
+    width: 70%; }
+    .search-filter__container .filter__container {
+      margin-left: 0; } }
+
+@media (max-width: 576px) {
+  .search-filter__container {
+    width: 90%; } }
+
 .hotel-info {
   background-color: #6f6ab2; }
 

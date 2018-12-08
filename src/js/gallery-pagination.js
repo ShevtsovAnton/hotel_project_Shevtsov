@@ -113,7 +113,7 @@ const galleryPagination = (function() {
 itemsPerPage = 6;
 
 galleryItemsArray = document.querySelectorAll('.image-box');
-totalItems = document.querySelectorAll('.image-box').length;
+totalItems = galleryItemsArray.length;
 totalPages = Math.floor( totalItems / itemsPerPage);
 
 
