@@ -127,31 +127,47 @@
             <div class="search__container">
                 <input type="text" id="searchInput" placeholder="Search for rooms..">
             </div>
-            <div class="filter__container">
-                <span class="filter__title">Filter:</span>
+        </div>
+            <!-- <div class="filter__container"> -->
+                <!-- <span class="filter__title">Filter:</span>
                 <label class="filter__item" for="standart-room">Standart
-                    <input type="checkbox" id="standart-room">
+                    <input type="radio" id="standart-room" name="roomType">
                 </label>
                 <label class="filter__item" for="economy-room">Economy
-                    <input type="checkbox" id="economy-room">
+                    <input type="radio" id="economy-room" name="roomType">
                 </label>
                 <label class="filter__item" for="deluxe-room">Deluxe
-                    <input type="checkbox" id="deluxe-room">
-                </label>
-            </div>
-        </div>
+                    <input type="radio" id="deluxe-room" name="roomType">
+                </label> -->
+            <!-- </div> -->
+        
         <div class="nav-item__body room-cards">
             <div class="nav-item_body-title">
                 <h2>Let Us Rock You To Sleep</h2>
                 <p>Come wind down in one of 35 rooms and suites, welcoming guests with our signature contemporary style and chic vibe. You’ll sleep like a baby with plush bedding, luxury amenities and some digital features to make resting even easier.</p>
             </div>
+
+            <!-- filter -->
+            
+            <input type="radio" id="resetFilter" name="roomType">
+            <label class="filter__item" for="resetFilter">Reset Filter</label>
+
+            <input type="radio" id="standart-room" name="roomType">
+            <label class="filter__item" for="standart-room">Standart</label>
+           
+            <input type="radio" id="economy-room" name="roomType">
+            <label class="filter__item" for="economy-room">Economy</label>
+
+            <input type="radio" id="deluxe-room" name="roomType">
+            <label class="filter__item" for="deluxe-room">Deluxe</label>
+            
             <!-- room-deluxe -->
-            <div class="room-card__container">
+            <div class="room-card__container deluxe-room">
                 <div class="room-card__picture room-deluxe">
                 </div>
                 <div class="room-card__info">
                     <div class="room-card__description">
-                        <h3>Deluxe Room</h3>
+                        <h3>Deluxe Room 101</h3>
                         <p>Choose a king bed, two double beds or two queen beds if you brought some band members with you. Relax like you deserve it.</p>
                     </div>
                     <div class="room-card__footer">
@@ -165,13 +181,13 @@
             </div>
 
                  <!-- room-standart -->
-            <div class="room-card__container">
+            <div class="room-card__container standart-room">
                 <div class="room-card__picture room-standart">
                 </div>
                 <div class="room-card__info">
                     <div class="room-card__description">
-                        <h3 class="room-card__search">Standart Room</h3>
-                        <p class="room-card__search">All the single ladies, or the not-so-single ladies,  Leisure Hotel  has created a whole floor especially for you.</p>
+                        <h3 class="room-card__search">Standart Room 102</h3>
+                        <p class="room-card__search">All the single ladies, or the not-so-single ladies, Hard Rock Hotel Guadalajara has created a whole floor especially for you.</p>
                     </div>
                     <div class="room-card__footer">
                         <a href="" role="button" class="bookNowButton">Book Now</a>
@@ -184,11 +200,67 @@
             </div>
 
               <!-- room-economy -->
-            <div class="room-card__container">
+            <div class="room-card__container economy-room">
                 <div class="room-card__picture room-economy"></div>
                 <div class="room-card__info">
                     <div class="room-card__description">
-                        <h3>Economy Room</h3>
+                        <h3>Economy Room 103</h3>
+                        <p>Sleep like royalty in a King-size bed, surrounded by celebrity-style amenities from plush robes to Executive Chef treats. </p>
+                    </div>
+                    <div class="room-card__footer">
+                        <a href="" role="button" class="bookNowButton">Book Now</a>
+                        <div class="room-card__size-info">
+                            <span>Room Size</span>
+                            <span>14 sqm approximately</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- room-deluxe -->
+            <div class="room-card__container deluxe-room">
+                <div class="room-card__picture room-deluxe">
+                </div>
+                <div class="room-card__info">
+                    <div class="room-card__description">
+                        <h3>Deluxe Room 201</h3>
+                        <p>Choose a king bed, two double beds or two queen beds if you brought some band members with you. Relax like you deserve it.</p>
+                    </div>
+                    <div class="room-card__footer">
+                        <a href="" role="button" class="bookNowButton">Book Now</a>
+                        <div class="room-card__size-info">
+                            <span>Room Size</span>
+                            <span>40 sqm approximately</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                    <!-- room-standart -->
+            <div class="room-card__container standart-room">
+                <div class="room-card__picture room-standart">
+                </div>
+                <div class="room-card__info">
+                    <div class="room-card__description">
+                        <h3 class="room-card__search">Standart Room 202</h3>
+                        <p class="room-card__search">All the single ladies, or the not-so-single ladies, Hard Rock Hotel Guadalajara has created a whole floor especially for you.</p>
+                    </div>
+                    <div class="room-card__footer">
+                        <a href="" role="button" class="bookNowButton">Book Now</a>
+                        <div class="room-card__size-info">
+                            <span>Room Size</span>
+                            <span>25 sqm approximately</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <!-- room-economy -->
+            <div class="room-card__container economy-room">
+                <div class="room-card__picture room-economy"></div>
+                <div class="room-card__info">
+                    <div class="room-card__description">
+                        <h3>Economy Room 203</h3>
                         <p>Sleep like royalty in a King-size bed, surrounded by celebrity-style amenities from plush robes to Executive Chef treats. </p>
                     </div>
                     <div class="room-card__footer">

@@ -466,6 +466,11 @@ body.modal-open {
 .filter__item {
   line-height: 40px; }
 
+.filter__item {
+  cursor: pointer; }
+  .filter__item input {
+    cursor: pointer; }
+
 @media (max-width: 992px) {
   .search-filter__container {
     flex-direction: column;
@@ -476,6 +481,50 @@ body.modal-open {
 @media (max-width: 576px) {
   .search-filter__container {
     width: 90%; } }
+
+.nav-item__body.room-cards input[type="radio"] {
+  display: none; }
+
+.nav-item__body.room-cards label {
+  width: 23%;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  color: #222222;
+  padding: 5px 10px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+  cursor: pointer; }
+
+.nav-item__body.room-cards input[type="radio"][id="standart-room"]:checked ~ .economy-room,
+.nav-item__body.room-cards input[type="radio"][id="standart-room"]:checked ~ .deluxe-room {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0; }
+
+.nav-item__body.room-cards input[type="radio"][id="standart-room"]:checked + label,
+.nav-item__body.room-cards input[type="radio"][id="deluxe-room"]:checked + label,
+.nav-item__body.room-cards input[type="radio"][id="economy-room"]:checked + label {
+  background: #dbb94b;
+  color: white; }
+
+.nav-item__body.room-cards input[type="radio"][id="deluxe-room"]:checked ~ .standart-room,
+.nav-item__body.room-cards input[type="radio"][id="deluxe-room"]:checked ~ .economy-room {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0; }
+
+.nav-item__body.room-cards input[type="radio"][id="economy-room"]:checked ~ .standart-room,
+.nav-item__body.room-cards input[type="radio"][id="economy-room"]:checked ~ .deluxe-room {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0; }
 
 .hotel-info {
   background-color: #6f6ab2; }

@@ -50,6 +50,14 @@
   line-height: 40px;
 }
 
+.filter__item {
+  cursor: pointer;
+
+  & input {
+    cursor: pointer;
+  }
+}
+
 @media (max-width: 992px) {
   .search-filter__container {
     flex-direction: column;
