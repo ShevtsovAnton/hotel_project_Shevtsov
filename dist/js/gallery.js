@@ -47,9 +47,6 @@ const displayGallery = (function() {
     });
   }
 
-
-
-
   function highlightThumbnail(){
     thumbnails.forEach(function(el) {
       el.classList.remove('thumbnail-active');
@@ -64,21 +61,12 @@ const displayGallery = (function() {
     lightbox.classList.remove('show-it');
   }
 
-  // function openLightBox(event, i) {
-  //   lightbox.classList.add('show-it');
-  //   lightbox.children[1].setAttribute('src', displayedPics[i].children[0].getAttribute('src'));
-  //   clickedImageSrc = event.target.getAttribute('src');
-  //   highlightThumbnail()
-  // }
-
   //add event listeners
-
   function setEventListeners() {
     // event click on all gallery images
     for (let i = 0; i < pics.length; i++) {
       pics[i].addEventListener('click', function(event) {
         lightbox.classList.add('show-it');
-        // lightbox.children[1].setAttribute('src', displayedPics[i].children[0].getAttribute('src'));
         lightbox.children[1].setAttribute('src', event.target.getAttribute('src'));
         clickedImageSrc = event.target.getAttribute('src');
         highlightThumbnail();
@@ -94,8 +82,10 @@ const displayGallery = (function() {
   function init(imagesPerPage) {
     displayOnThePage(imagesPerPage);
     let displayedPics = document.querySelectorAll('.image-box.displayIt');
+    console.log(displayedPics);
     createThumbnails(displayedPics);
-    let thumbnails = document.querySelectorAll('.thumbnail');
+    // let thumbnails = document.querySelectorAll('.thumbnail');
+    // setImageForThumbnails(thumbnails);
     setImageForThumbnails(thumbnails);
     highlightThumbnail();
     setEventListeners()
