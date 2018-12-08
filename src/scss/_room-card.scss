@@ -5,7 +5,6 @@
 }
 
 .room-card__picture  {
-    object-fit: contain;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -14,17 +13,14 @@
 
 .room-deluxe {
     background-image: url("../assets/img/room-lux.jpeg");
-    background-position: center;
 }
 
 .room-standart {
     background-image: url("../assets/img/room-standart.jpeg");
-    background-position: center;
 }
 
 .room-economy {
     background-image: url("../assets/img/room-econom.jpeg");
-    background-position: center;
 }
 
 .room-card__description {
@@ -57,5 +53,16 @@
     
     & span:first-child {
         font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .room-card__container {
+        flex-direction: column;
+    }
+
+    .room-card__picture  {
+        height: 300px;
+        width: 100%;
     }
 }

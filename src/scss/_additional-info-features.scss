@@ -55,7 +55,6 @@
     }
 
     .features__groups::after {
-            // display: none;
             width: 10%;
         }
 }
@@ -73,8 +72,4 @@
     .features__groups::after {
         display: none;
     }
-}
-
-@media (max-width: 576px) {
-
 }

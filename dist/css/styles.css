@@ -235,7 +235,7 @@ body.modal-open {
   height: 100%;
   overflow-y: scroll;
   overflow-x: visible;
-  transition: left 0.3s ease, box-shadow 0.3s ease;
+  transition: left 0.3s ease;
   z-index: 999; }
 
 .burger__menu ul {
@@ -352,23 +352,19 @@ body.modal-open {
   margin: 40px auto; }
 
 .room-card__picture {
-  object-fit: contain;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 60%; }
 
 .room-deluxe {
-  background-image: url("../assets/img/room-lux.jpeg");
-  background-position: center; }
+  background-image: url("../assets/img/room-lux.jpeg"); }
 
 .room-standart {
-  background-image: url("../assets/img/room-standart.jpeg");
-  background-position: center; }
+  background-image: url("../assets/img/room-standart.jpeg"); }
 
 .room-economy {
-  background-image: url("../assets/img/room-econom.jpeg");
-  background-position: center; }
+  background-image: url("../assets/img/room-econom.jpeg"); }
 
 .room-card__description {
   padding: 30px;
@@ -393,6 +389,13 @@ body.modal-open {
     text-align: center; }
   .room-card__size-info span:first-child {
     font-size: 0.8rem; }
+
+@media (max-width: 576px) {
+  .room-card__container {
+    flex-direction: column; }
+  .room-card__picture {
+    height: 300px;
+    width: 100%; } }
 
 .breadcrumbs {
   background: #ececec;

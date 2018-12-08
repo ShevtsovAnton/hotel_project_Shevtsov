@@ -55,7 +55,6 @@
     width: 50%;
     position: relative;
 
-    // height: 50%; //!!!!!!adaptive
     & .slide__controls {
         content: '';
         display: block;
@@ -64,13 +63,11 @@
         cursor: pointer;
         height: 40px;
         width: 40px;
-        // background: red;
         transition: all 0.5s ease;
     }
 
     & .slide__previous {
         left: 20px;
-        // background-image: url("../assets/img/arrow-back-black.png");
         background-image: url("../assets/img/arrow-left-gray.png");
         background-size: contain;
         
@@ -82,7 +79,6 @@
 
     & .slide__next {
         right: 20px;
-        // background-image: url("../assets/img/arrow-right-black.png");
         background-image: url("../assets/img/arrow-right-gray.png");
         background-size: contain;
 

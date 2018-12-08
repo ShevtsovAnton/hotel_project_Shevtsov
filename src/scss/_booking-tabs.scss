@@ -16,26 +16,26 @@
 input[type="radio"][name="tabs"] {
 
   z-index: -1;
+
   &:checked + .tab__label {
       .tab__content {
         display: block;
       }
-    }
+  }
 
-    &:nth-of-type(1):checked ~ .tab__slide {
-            left: 0;
-        }
-    
+  &:nth-of-type(1):checked ~ .tab__slide {
+          left: 0;
+  }
+  
 
-    &:nth-of-type(2):checked ~ .tab__slide {
-          left: 50%;
-        }
+  &:nth-of-type(2):checked ~ .tab__slide {
+        left: 50%;
+  }
 }
 
 .tab__selector {
   cursor: pointer;
   color: $golden-color;
-  // background-color: rgba(17, 17, 17, 0.9);
   box-sizing: border-box;
   display: inline-flex;
   align-items: center;
@@ -72,7 +72,9 @@ input[type="radio"][name="tabs"] {
 }
 
 @media (max-width: 576px) {
-    .general-container {
+
+  .general-container {
         width: 300px;
-    }
+  }
+  
 }
