@@ -28,7 +28,7 @@
     cursor: pointer;
 }
 
-.pagination-item.active, .pagination-item:hover {
+.pagination-item.current, .pagination-item:hover {
     color: #fff;
     background-color: #19bdc5;
 }
@@ -49,7 +49,7 @@
     cursor: default;
     color: #19bdc5;
 }
-.pagination-item-disabled.active, .pagination-item-disabled:hover {
+.pagination-item-disabled.current, .pagination-item-disabled:hover {
     color: #19bdc5;
     background-color: transparent;
 }

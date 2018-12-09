@@ -1,3 +1,124 @@
+let itemsPerPage = 6;
+let currentPage = 3;
+let galleryItemsArray = document.querySelectorAll('.image-box');
+let totalItems = galleryItemsArray.length;
+let totalPages = Math.floor( totalItems / itemsPerPage);
+
+const displayGallery = (function() {
+  
+
+    //cache Dome 
+    // let displayedPics = document.querySelectorAll('.image-box.displayIt');
+    const pics = document.querySelectorAll('.image-box');
+    const lightbox = document.getElementById('lightbox');
+    const close = document.getElementById('close');
+    const overlay = document.getElementById('overlay');
+    // const thumbnails = document.querySelectorAll('.thumbnail');
+  
+    //data 
+    // let clickedImageSrc; 
+  
+    //functions
+    function displayOnThePage(numberOfElement, currentPage) {
+      const imageBox = document.querySelectorAll('.image-box');
+      let beginIndex = (currentPage - 1) * numberOfElement;
+      let endIndex = currentPage * numberOfElement;
+      for (let i = 0; i < imageBox.length; i++) {
+        if ((i >= beginIndex) && (i < endIndex)) {
+            if (imageBox[i].classList.contains('dontDisplayIt')) {
+                imageBox[i].classList.remove('dontDisplayIt');
+            }
+            imageBox[i].classList.add('displayIt')
+        } else {
+          if (imageBox[i].classList.contains('displayIt')) {
+              imageBox[i].classList.remove('displayIt');
+          }
+             imageBox[i].classList.add('dontDisplayIt');
+        }
+      }
+    }
+  
+    // //create thumbnails
+    // function createThumbnails(displayedPics) {
+    //   for (let i = 0; i < displayedPics.length; i++) {
+    //     let thumb = document.createElement('img');
+    //     thumb.className = 'thumbnail';
+    //     document.getElementById('thumb').appendChild(thumb);
+    //     thumb.setAttribute('src', displayedPics[i].children[0].getAttribute('src'));
+    //   }
+    // }
+  
+    // //set src to thumbnails
+    // function setImageForThumbnails(thumbnails){
+    //   thumbnails.forEach(function(el) {
+    //     el.onclick = function() {
+    //       thumbnails.forEach(function(el) {
+    //         el.classList.remove('thumbnail-active');
+    //       })
+    //       lightbox.children[1].setAttribute('src', el.getAttribute('src'));
+    //       el.classList.add('thumbnail-active');
+    //     }
+    //   });
+    // }
+    // //clear thumbnails
+    // function clearThumbnails() {
+    //     while (document.getElementById('thumb').firstChild) {
+    //         document.getElementById('thumb').removeChild(document.getElementById('thumb').firstChild);
+    //     }
+    // }
+    
+    // function highlightThumbnail(){
+    //   thumbnails.forEach(function(el) {
+    //     el.classList.remove('thumbnail-active');
+    //     if (el.getAttribute('src')===clickedImageSrc) {
+    //       el.classList.add('thumbnail-active');
+    //     }
+    //   })
+    // }
+    // functions for events
+  
+    function closeLightBox () {
+        lightbox.classList.remove('show-it');
+    }
+  
+    //add event listeners
+    function setEventListeners() {
+      // event click on all gallery images
+      for (let i = 0; i < pics.length; i++) {
+        pics[i].addEventListener('click', function(event) {
+          lightbox.classList.add('show-it');
+          lightbox.children[1].setAttribute('src', event.target.getAttribute('src'));
+        //   clickedImageSrc = event.target.getAttribute('src');
+        //   highlightThumbnail();
+        });
+      }
+  
+      //event close lightbox
+      close.addEventListener('click', closeLightBox);
+      overlay.addEventListener('click', closeLightBox)
+      }
+  
+    //public 
+  
+    function init(imagesPerPage, currentPage) {
+      displayOnThePage(imagesPerPage, currentPage);
+    //   let displayedPics = document.querySelectorAll('.image-box.displayIt');
+    //   createThumbnails(displayedPics);
+    //   let thumbnails = document.querySelectorAll('.thumbnail');
+    //   setImageForThumbnails(thumbnails);
+    //   highlightThumbnail();
+      setEventListeners()
+    }
+
+    return {
+  
+      init: init,
+    
+    }
+  
+})()         
+
+
 const galleryPagination = (function() {
     const targetElement = document.getElementById('pagination');
     // let listClass = 'js-pagination';
@@ -58,7 +179,7 @@ const galleryPagination = (function() {
             for (let i = 1; i <= pages; i++) {
                 if ((page+pagesBeforeAndAfter >= i) && (page-pagesBeforeAndAfter <= i)) {
                     if (i == page) {
-                        numbersList.appendChild(createListItemElement(i, listItemClass, 'active', pageNumberAttribute, i));
+                        numbersList.appendChild(createListItemElement(i, listItemClass, 'current', pageNumberAttribute, i));
                     } else if (i == pages) {
                         numbersList.appendChild(createListItemElement(pages, listItemClass, lastItemClass, pageNumberAttribute, pages));
                     }
@@ -110,17 +231,10 @@ const galleryPagination = (function() {
 }());
 
 
-itemsPerPage = 6;
-
-galleryItemsArray = document.querySelectorAll('.image-box');
-totalItems = galleryItemsArray.length;
-totalPages = Math.floor( totalItems / itemsPerPage);
-
+displayGallery.init(itemsPerPage, currentPage);
 
 galleryPagination.setPages(totalPages);
-galleryPagination.init(1, totalPages);
-
-// currentPage = document.querySelector('.pagination-item.active').getAttribute('data-page');
+galleryPagination.init(currentPage, totalPages);
     
 
 function listenToTheClick() {
@@ -132,24 +246,25 @@ function listenToTheClick() {
         list[i].addEventListener('click', function(e) {
             currentPage = +e.currentTarget.getAttribute('data-page');
             totalPages = Math.floor( totalItems / itemsPerPage);
-            let beginIndex = currentPage * itemsPerPage - 1;
-            let endIndex = currentPage * itemsPerPage + itemsPerPage - 1;
+            // let beginIndex = currentPage * itemsPerPage - 1;
+            // let endIndex = currentPage * itemsPerPage + itemsPerPage - 1;
 
-            for (let i = 0; i < galleryItemsArray.length; i++) {
-                if ((i <= beginIndex) || (i >= endIndex)) {
-                    if (galleryItemsArray[i].classList.contains('displayIt')) {
-                        galleryItemsArray[i].classList.remove('displayIt');
-                        galleryItemsArray[i].classList.add('dontDisplayIt');
-                    }
-                }
+            // for (let i = 0; i < galleryItemsArray.length; i++) {
+            //     if ((i <= beginIndex) || (i >= endIndex)) {
+            //         if (galleryItemsArray[i].classList.contains('displayIt')) {
+            //             galleryItemsArray[i].classList.remove('displayIt');
+            //             galleryItemsArray[i].classList.add('dontDisplayIt');
+            //         }
+            //     }
                 
-                if ((i >= beginIndex) && (i < endIndex)) {
-                    if (galleryItemsArray[i].classList.contains('dontDisplayIt')) {
-                        galleryItemsArray[i].classList.remove('dontDisplayIt');
-                    }
-                    galleryItemsArray[i].classList.add('displayIt')
-                }  
-            }    
+            //     if ((i >= beginIndex) && (i < endIndex)) {
+            //         if (galleryItemsArray[i].classList.contains('dontDisplayIt')) {
+            //             galleryItemsArray[i].classList.remove('dontDisplayIt');
+            //         }
+            //         galleryItemsArray[i].classList.add('displayIt')
+            //     }  
+            // }
+            displayGallery.init(6, currentPage);
             galleryPagination.init(currentPage, totalPages);
             listenToTheClick();
     })

@@ -13,13 +13,21 @@ const displayGallery = (function() {
   let clickedImageSrc; 
 
   //functions
-  function displayOnThePage(numberOfElement) {
+  function displayOnThePage(numberOfElement, currentPage) {
     const imageBox = document.querySelectorAll('.image-box');
+    let beginIndex = (currentPage - 1) * numberOfElement;
+    let endIndex = currentPage * numberOfElement;
     for (let i = 0; i < imageBox.length; i++) {
-      if (i < numberOfElement) {
-        imageBox[i].classList.add('displayIt');
+      if ((i >= beginIndex) && (i < endIndex)) {
+          if (imageBox[i].classList.contains('dontDisplayIt')) {
+              imageBox[i].classList.remove('dontDisplayIt');
+          }
+          imageBox[i].classList.add('displayIt')
       } else {
-        imageBox[i].classList.add('dontDisplayIt');
+        if (imageBox[i].classList.contains('displayIt')) {
+            imageBox[i].classList.remove('displayIt');
+        }
+           imageBox[i].classList.add('dontDisplayIt');
       }
     }
   }
@@ -79,10 +87,10 @@ const displayGallery = (function() {
     }
 
   //public 
-  function init(imagesPerPage) {
-    displayOnThePage(imagesPerPage);
+
+  function init(imagesPerPage, currentPage) {
+    displayOnThePage(imagesPerPage, currentPage);
     let displayedPics = document.querySelectorAll('.image-box.displayIt');
-    console.log(displayedPics);
     createThumbnails(displayedPics);
     // let thumbnails = document.querySelectorAll('.thumbnail');
     // setImageForThumbnails(thumbnails);
@@ -94,13 +102,14 @@ const displayGallery = (function() {
   return {
 
     init: init,
+    displayOnThePage: displayOnThePage
   
   }
 
 })()    
 
 
-displayGallery.init(6);
+displayGallery.init(6, 1);
 
 
     

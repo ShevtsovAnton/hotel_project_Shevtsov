@@ -2,7 +2,6 @@ const searchRooms = (function() {
     //cache Dome
     const searchInputField = document.getElementById('searchInput');
    
-
     //functions
     function myFunction() {
         

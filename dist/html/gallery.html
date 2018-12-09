@@ -8,231 +8,233 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header class="page-header">
-        <!-- Burger -->
-        <div class="burger__container">
-        <!-- burger icon -->
-            <a href="" id="burger-toggle" class="burger__toggle" aria-expanded="false">
-            <img src="../assets/img/burger-menu.svg" class="burger__icon" alt="">
-            <span>Menu</span>
-            </a>
-
-        <!-- Burger Menu Items-->
-            <nav id="burger-menu" aria-expanded="false" class="burger__menu">
-                <a href=""  id="burger-close" class="burger__close" aria-expanded="false">
-                    <img src="../assets/img/close.svg" class="burger__close-icon" alt="">
+    <!-- <div class="gallery-page"> -->
+        <header class="page-header">
+            <!-- Burger -->
+            <div class="burger__container">
+            <!-- burger icon -->
+                <a href="" id="burger-toggle" class="burger__toggle" aria-expanded="false">
+                <img src="../assets/img/burger-menu.svg" class="burger__icon" alt="">
+                <span>Menu</span>
                 </a>
-                <ul class="burger__menu-list">
-                    <li class="burger__menu-item">
-                        <a href="#">Main</a>
-                    </li>
-                    <li class="burger__menu-item">
-                        <a href="#">Accomodations</a>
-                    </li>
-                    <li class="burger__menu-item">
-                        <a href="#">Services</a>
-                    </li>
-                    <li class="burger__menu-item">
-                        <a href="#">Special Offers</a>
-                    </li>
-                    <li class="burger__menu-item">
-                        <a href="#">Contacts</a>
-                    </li>
-                </ul>
+
+            <!-- Burger Menu Items-->
+                <nav id="burger-menu" aria-expanded="false" class="burger__menu">
+                    <a href=""  id="burger-close" class="burger__close" aria-expanded="false">
+                        <img src="../assets/img/close.svg" class="burger__close-icon" alt="">
+                    </a>
+                    <ul class="burger__menu-list">
+                        <li class="burger__menu-item">
+                            <a href="#">Main</a>
+                        </li>
+                        <li class="burger__menu-item">
+                            <a href="#">Accomodations</a>
+                        </li>
+                        <li class="burger__menu-item">
+                            <a href="#">Services</a>
+                        </li>
+                        <li class="burger__menu-item">
+                            <a href="#">Special Offers</a>
+                        </li>
+                        <li class="burger__menu-item">
+                            <a href="#">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="" class="burger__backdrop" id="burger-backdrop"></a>
+            </div>
+            <div class="page-header__logo-wrapper">
+                <a class="page-header__logo" href="../index.html">
+                    <img src="../assets/img/logo.png" alt="hotel-logo">
+                    <span>Leisure Hotel</span>
+                </a> 
+            </div>
+            <nav class="main-nav">
+                <div class="main-nav__wrapper">
+                    <ul class="main-nav__list site-list">
+                        <li class="site-list__item site-list__item--active">
+                            <a href="">Main</a>
+                        </li>
+                        <li class="site-list__item">
+                            <a href="">Accomodations</a>
+                            <ul class="site-list__dropdown-list">
+                                <li class="site-list__subItem">
+                                    <a href="">Room 1</a>
+                                </li>
+                                <li class="site-list__subItem">
+                                    <a href="">Room 2</a>
+                                </li>
+                                <li class="site-list__subItem">
+                                    <a href="">Room 3</a>
+                                </li>
+                                <li class="site-list__subItem">
+                                    <a href="">Room 4</a>
+                                </li>
+                                <li class="site-list__subItem">
+                                    <a href="">Room 5</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="site-list__item">
+                            <a href="">Services</a>
+                        </li>
+                        <li class="site-list__item">
+                            <a href="">Special Offers</a>
+                        </li>
+                        <li class="site-list__item">
+                            <a href="">Contacts</a>
+                        </li>
+                    </ul>
+                    <a href="" role="button" id="bookNowButton">Book Now</a>
+                </div>
             </nav>
-            <a href="" class="burger__backdrop" id="burger-backdrop"></a>
-        </div>
-        <div class="page-header__logo-wrapper">
-            <a class="page-header__logo" href="../index.html">
-                <img src="../assets/img/logo.png" alt="hotel-logo">
-                <span>Leisure Hotel</span>
-            </a> 
-        </div>
-        <nav class="main-nav">
-            <div class="main-nav__wrapper">
-                <ul class="main-nav__list site-list">
-                    <li class="site-list__item site-list__item--active">
-                        <a href="">Main</a>
-                    </li>
-                    <li class="site-list__item">
-                        <a href="">Accomodations</a>
-                        <ul class="site-list__dropdown-list">
-                            <li class="site-list__subItem">
-                                <a href="">Room 1</a>
-                            </li>
-                            <li class="site-list__subItem">
-                                <a href="">Room 2</a>
-                            </li>
-                            <li class="site-list__subItem">
-                                <a href="">Room 3</a>
-                            </li>
-                            <li class="site-list__subItem">
-                                <a href="">Room 4</a>
-                            </li>
-                            <li class="site-list__subItem">
-                                <a href="">Room 5</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="site-list__item">
-                        <a href="">Services</a>
-                    </li>
-                    <li class="site-list__item">
-                        <a href="">Special Offers</a>
-                    </li>
-                    <li class="site-list__item">
-                        <a href="">Contacts</a>
-                    </li>
-                </ul>
-                <a href="" role="button" id="bookNowButton">Book Now</a>
-            </div>
-        </nav>
-    </header>
+        </header>
 
-       <!-- the gallery -->
-    <div class="gallery__container">
-        <ul class="gallery">
-            <li class="image-box">
-                <img src="../assets/img/gallery/architecture-1837150_1920.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/bar-1869656_1920.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/bedroom-1285156_1920.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/bedroom-window-1434067_1920.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/breakfast-hotel-1921530_1920.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/cuisine-2248567_1920.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/exclusive-banquet-1812772_1920.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/people-hotel-bar-drinks.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/pexels-photo-1058277.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/pexels-photo-1062269.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/pexels-photo-1097439.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/pexels-photo-1437861.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/restaurant-449952_1920.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/villa-cortine-palace-949547_1920.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/pexels-photo-164595.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/pexels-photo-189293.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/pexels-photo-210604.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/pexels-photo-262047.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/pexels-photo-271619.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/pexels-photo-271624.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/pexels-photo-271639.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/pexels-photo-271672.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/pexels-photo-277572.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/pexels-photo-279746.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/pexels-photo-279813.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/pexels-photo-280121.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/pexels-photo-518244.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/pexels-photo-573552.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/pexels-photo-776615.jpg" alt="gallery image">
-            </li>
-            <li class="image-box">
-                <img src="../assets/img/gallery/pexels-photo-941861.jpg" alt="gallery image">
-            </li>
-        </ul>
+        <!-- the gallery -->
+        <div class="gallery__container">
+            <ul class="gallery">
+                <li class="image-box">
+                    <img src="../assets/img/gallery/architecture-1837150_1920.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/bar-1869656_1920.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/bedroom-1285156_1920.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/bedroom-window-1434067_1920.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/breakfast-hotel-1921530_1920.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/cuisine-2248567_1920.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/exclusive-banquet-1812772_1920.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/people-hotel-bar-drinks.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/pexels-photo-1058277.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/pexels-photo-1062269.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/pexels-photo-1097439.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/pexels-photo-1437861.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/restaurant-449952_1920.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/villa-cortine-palace-949547_1920.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/pexels-photo-164595.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/pexels-photo-189293.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/pexels-photo-210604.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/pexels-photo-262047.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/pexels-photo-271619.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/pexels-photo-271624.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/pexels-photo-271639.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/pexels-photo-271672.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/pexels-photo-277572.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/pexels-photo-279746.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/pexels-photo-279813.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/pexels-photo-280121.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/pexels-photo-518244.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/pexels-photo-573552.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/pexels-photo-776615.jpg" alt="gallery image">
+                </li>
+                <li class="image-box">
+                    <img src="../assets/img/gallery/pexels-photo-941861.jpg" alt="gallery image">
+                </li>
+            </ul>
 
-        <div class="lightbox" id="lightbox">
-            <div class="overlay" id="overlay"></div>
-            <img src="../assets/img/gallery/pexels-photo-271672.jpg" class="lightbox-image" alt="gallery image">
-            <button id="close">X</button>
-            <div class="thumbnails" id="thumb"></div>
-        </div>
-    </div>
-
-      <!-- Pagination -->
-
-    <div id="pagination"></div>
-
-
-     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer__container">
-            <div class="footer__link-container" id="test">
-                <div class="footer__link-column">
-                    <a href="" class="footer__link">Accomodations</a>
-                </div>
-                <div class="footer__link-column">
-                    <a href="" class="footer__link">Restaurants</a>
-                </div>
-                <div class="footer__link-column">
-                    <a href="" class="footer__link">Events</a>
-                </div>
-                <div class="footer__link-column">
-                    <a href="" class="footer__link">Contact Us</a>
-                </div>
-                <div class="footer__link-column">
-                    <a href="" class="footer__link">Services</a>
-                </div>
-                <div class="footer__link-column">
-                    <a href="" class="footer__link">Specials</a>
-                </div>
-            </div>
-            <div class="footer__legal">
-                <div class="footer__legal-links">
-                    <a href="">Privacy Policy</a>
-                    <a href="">Legal Disclaimer</a>
-                </div>
-                <div class="footer__copyright">
-                    Copyright © 2018 , Hotel Administration
-                </div>
+            <div class="lightbox" id="lightbox">
+                <div class="overlay" id="overlay"></div>
+                <img src="../assets/img/gallery/pexels-photo-271672.jpg" class="lightbox-image" alt="gallery image">
+                <button id="close">X</button>
+                <div class="thumbnails" id="thumb"></div>
             </div>
         </div>
-    </footer>
+
+        <!-- Pagination -->
+
+        <div id="pagination"></div>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__link-container" id="test">
+                    <div class="footer__link-column">
+                        <a href="" class="footer__link">Accomodations</a>
+                    </div>
+                    <div class="footer__link-column">
+                        <a href="" class="footer__link">Restaurants</a>
+                    </div>
+                    <div class="footer__link-column">
+                        <a href="" class="footer__link">Events</a>
+                    </div>
+                    <div class="footer__link-column">
+                        <a href="" class="footer__link">Contact Us</a>
+                    </div>
+                    <div class="footer__link-column">
+                        <a href="" class="footer__link">Services</a>
+                    </div>
+                    <div class="footer__link-column">
+                        <a href="" class="footer__link">Specials</a>
+                    </div>
+                </div>
+                <div class="footer__legal">
+                    <div class="footer__legal-links">
+                        <a href="">Privacy Policy</a>
+                        <a href="">Legal Disclaimer</a>
+                    </div>
+                    <div class="footer__copyright">
+                        Copyright © 2018 , Hotel Administration
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <!-- </div> -->
     <script src="../js/burger.js"></script>
-    <script src="../js/gallery.js"></script>
+    <!-- <script src="../js/gallery.js"></script> -->
     <script src="../js/gallery-pagination.js"></script>
 
 </body>

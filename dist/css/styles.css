@@ -860,7 +860,8 @@ body.modal-open {
   justify-content: center;
   transform: rotateY(90deg);
   transition: 0.5s ease all;
-  opacity: 0; }
+  opacity: 0;
+  z-index: 22; }
 
 .lightbox .overlay {
   position: absolute;
@@ -976,7 +977,7 @@ body.modal-open {
   text-align: center;
   cursor: pointer; }
 
-.pagination-item.active, .pagination-item:hover {
+.pagination-item.current, .pagination-item:hover {
   color: #fff;
   background-color: #19bdc5; }
 
@@ -995,7 +996,7 @@ body.modal-open {
   cursor: default;
   color: #19bdc5; }
 
-.pagination-item-disabled.active, .pagination-item-disabled:hover {
+.pagination-item-disabled.current, .pagination-item-disabled:hover {
   color: #19bdc5;
   background-color: transparent; }
 
