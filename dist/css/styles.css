@@ -1,7 +1,9 @@
 html {
   box-sizing: border-box; }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit; }
 
 body {
@@ -315,8 +317,7 @@ body.modal-open {
   position: absolute;
   top: 492px;
   left: 0;
-  right: 0;
-  z-index: 2; }
+  right: 0; }
 
 .nav-item__title {
   max-width: 992px;
@@ -772,6 +773,9 @@ body.modal-open {
     text-transform: uppercase;
     text-decoration: none;
     color: white; }
+  .explore-gallery__header h2 a:hover {
+    color: #dbb94b;
+    text-decoration: underline; }
 
 .explore-gallery__body {
   display: flex;

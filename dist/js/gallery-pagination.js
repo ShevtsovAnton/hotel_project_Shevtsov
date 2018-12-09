@@ -1,5 +1,5 @@
 let itemsPerPage = 6;
-let currentPage = 3;
+let currentPage = 1;
 let galleryItemsArray = document.querySelectorAll('.image-box');
 let totalItems = galleryItemsArray.length;
 let totalPages = Math.floor( totalItems / itemsPerPage);
@@ -38,58 +38,16 @@ const displayGallery = (function() {
       }
     }
   
-    // //create thumbnails
-    // function createThumbnails(displayedPics) {
-    //   for (let i = 0; i < displayedPics.length; i++) {
-    //     let thumb = document.createElement('img');
-    //     thumb.className = 'thumbnail';
-    //     document.getElementById('thumb').appendChild(thumb);
-    //     thumb.setAttribute('src', displayedPics[i].children[0].getAttribute('src'));
-    //   }
-    // }
-  
-    // //set src to thumbnails
-    // function setImageForThumbnails(thumbnails){
-    //   thumbnails.forEach(function(el) {
-    //     el.onclick = function() {
-    //       thumbnails.forEach(function(el) {
-    //         el.classList.remove('thumbnail-active');
-    //       })
-    //       lightbox.children[1].setAttribute('src', el.getAttribute('src'));
-    //       el.classList.add('thumbnail-active');
-    //     }
-    //   });
-    // }
-    // //clear thumbnails
-    // function clearThumbnails() {
-    //     while (document.getElementById('thumb').firstChild) {
-    //         document.getElementById('thumb').removeChild(document.getElementById('thumb').firstChild);
-    //     }
-    // }
-    
-    // function highlightThumbnail(){
-    //   thumbnails.forEach(function(el) {
-    //     el.classList.remove('thumbnail-active');
-    //     if (el.getAttribute('src')===clickedImageSrc) {
-    //       el.classList.add('thumbnail-active');
-    //     }
-    //   })
-    // }
-    // functions for events
-  
     function closeLightBox () {
         lightbox.classList.remove('show-it');
     }
   
     //add event listeners
     function setEventListeners() {
-      // event click on all gallery images
       for (let i = 0; i < pics.length; i++) {
         pics[i].addEventListener('click', function(event) {
           lightbox.classList.add('show-it');
           lightbox.children[1].setAttribute('src', event.target.getAttribute('src'));
-        //   clickedImageSrc = event.target.getAttribute('src');
-        //   highlightThumbnail();
         });
       }
   
@@ -102,11 +60,6 @@ const displayGallery = (function() {
   
     function init(imagesPerPage, currentPage) {
       displayOnThePage(imagesPerPage, currentPage);
-    //   let displayedPics = document.querySelectorAll('.image-box.displayIt');
-    //   createThumbnails(displayedPics);
-    //   let thumbnails = document.querySelectorAll('.thumbnail');
-    //   setImageForThumbnails(thumbnails);
-    //   highlightThumbnail();
       setEventListeners()
     }
 
@@ -121,7 +74,6 @@ const displayGallery = (function() {
 
 const galleryPagination = (function() {
     const targetElement = document.getElementById('pagination');
-    // let listClass = 'js-pagination';
     let listItemClass = 'pagination-item';
     let pageNumberAttribute = 'data-page';
     let disabledClass = 'pagination-item-disabled';
@@ -246,24 +198,6 @@ function listenToTheClick() {
         list[i].addEventListener('click', function(e) {
             currentPage = +e.currentTarget.getAttribute('data-page');
             totalPages = Math.floor( totalItems / itemsPerPage);
-            // let beginIndex = currentPage * itemsPerPage - 1;
-            // let endIndex = currentPage * itemsPerPage + itemsPerPage - 1;
-
-            // for (let i = 0; i < galleryItemsArray.length; i++) {
-            //     if ((i <= beginIndex) || (i >= endIndex)) {
-            //         if (galleryItemsArray[i].classList.contains('displayIt')) {
-            //             galleryItemsArray[i].classList.remove('displayIt');
-            //             galleryItemsArray[i].classList.add('dontDisplayIt');
-            //         }
-            //     }
-                
-            //     if ((i >= beginIndex) && (i < endIndex)) {
-            //         if (galleryItemsArray[i].classList.contains('dontDisplayIt')) {
-            //             galleryItemsArray[i].classList.remove('dontDisplayIt');
-            //         }
-            //         galleryItemsArray[i].classList.add('displayIt')
-            //     }  
-            // }
             displayGallery.init(6, currentPage);
             galleryPagination.init(currentPage, totalPages);
             listenToTheClick();

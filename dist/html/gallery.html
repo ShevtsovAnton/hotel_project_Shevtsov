@@ -8,27 +8,37 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <!-- <div class="gallery-page"> -->
         <header class="page-header">
             <!-- Burger -->
             <div class="burger__container">
-            <!-- burger icon -->
+                <!-- burger icon -->
                 <a href="" id="burger-toggle" class="burger__toggle" aria-expanded="false">
-                <img src="../assets/img/burger-menu.svg" class="burger__icon" alt="">
-                <span>Menu</span>
+                    <img src="../assets/img/burger-menu.svg" class="burger__icon" alt="">
+                    <span>Menu</span>
                 </a>
 
-            <!-- Burger Menu Items-->
+                <!-- Burger Menu Items-->
                 <nav id="burger-menu" aria-expanded="false" class="burger__menu">
                     <a href=""  id="burger-close" class="burger__close" aria-expanded="false">
                         <img src="../assets/img/close.svg" class="burger__close-icon" alt="">
                     </a>
-                    <ul class="burger__menu-list">
+                    <ul class="burger__menu-list" id="burger__menu-list">
                         <li class="burger__menu-item">
                             <a href="#">Main</a>
                         </li>
-                        <li class="burger__menu-item">
-                            <a href="#">Accomodations</a>
+                        <li class="burger__menu-item" >
+                            <a href="#" id="burgerMenuAccomodations" >Accomodations</a>
+                            <ul class="burger__dropdown-list hidden" id="burgerDropdownList">
+                                <li class="burger__dropdown-item">
+                                    <a href="">Room 1</a>
+                                </li>
+                                <li class="burger__dropdown-item">
+                                    <a href="">Room 2</a>
+                                </li>
+                                <li class="burger__dropdown-item">
+                                    <a href="">Room 3</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="burger__menu-item">
                             <a href="#">Services</a>
@@ -44,7 +54,7 @@
                 <a href="" class="burger__backdrop" id="burger-backdrop"></a>
             </div>
             <div class="page-header__logo-wrapper">
-                <a class="page-header__logo" href="../index.html">
+                <a class="page-header__logo home-link" href="">
                     <img src="../assets/img/logo.png" alt="hotel-logo">
                     <span>Leisure Hotel</span>
                 </a> 
@@ -52,11 +62,8 @@
             <nav class="main-nav">
                 <div class="main-nav__wrapper">
                     <ul class="main-nav__list site-list">
-                        <li class="site-list__item site-list__item--active">
-                            <a href="">Main</a>
-                        </li>
                         <li class="site-list__item">
-                            <a href="">Accomodations</a>
+                            <a href="" class="main-nav__accomodations-link main-nav__link">Accomodations</a>
                             <ul class="site-list__dropdown-list">
                                 <li class="site-list__subItem">
                                     <a href="">Room 1</a>
@@ -67,25 +74,19 @@
                                 <li class="site-list__subItem">
                                     <a href="">Room 3</a>
                                 </li>
-                                <li class="site-list__subItem">
-                                    <a href="">Room 4</a>
-                                </li>
-                                <li class="site-list__subItem">
-                                    <a href="">Room 5</a>
-                                </li>
                             </ul>
                         </li>
-                        <li class="site-list__item">
-                            <a href="">Services</a>
+                        <li class="site-list__item site-list__item--active">
+                            <a href="" class="main-nav__reataurants-link main-nav__link">Restaurants</a>
                         </li>
                         <li class="site-list__item">
-                            <a href="">Special Offers</a>
+                            <a href="" class="main-nav__services-link main-nav__link">Services</a>
                         </li>
                         <li class="site-list__item">
-                            <a href="">Contacts</a>
+                            <a href="" class="main-nav__offers-link main-nav__link">Special Offers</a>
                         </li>
                     </ul>
-                    <a href="" role="button" id="bookNowButton">Book Now</a>
+                    <a href="" role="button" id="bookNowButton" class="bookNowButton">Book Now</a>
                 </div>
             </nav>
         </header>
@@ -232,9 +233,7 @@
                 </div>
             </div>
         </footer>
-    <!-- </div> -->
     <script src="../js/burger.js"></script>
-    <!-- <script src="../js/gallery.js"></script> -->
     <script src="../js/gallery-pagination.js"></script>
 
 </body>

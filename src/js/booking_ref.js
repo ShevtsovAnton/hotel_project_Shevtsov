@@ -15,19 +15,9 @@ const bookingModule = (function () {
 
   //data
   const numberOfRooms = 3;
-  // const roomRegistry = createEmptyArray();
-  // const bookingInfo = [];
   const oneDay = 24 * 60 * 60 * 1000;
 
   //functions
-  // function createEmptyArray() {
-  //   let array = [];
-  //   for (let i = 0; i < numberOfRooms; i++) {
-  //     array[i] = [];
-  //   }
-  //   return array
-  // }
-
   function generateBookingId() {
     let timestamp = (+new Date()).toString();
     let parts = timestamp.split('').reverse();
@@ -68,7 +58,6 @@ const bookingModule = (function () {
       fullName: fullName.value,
       arrivalDate: arrivalDate.value,
       departureDate: departureDate.value,
-      // numberOfNights: numberOfNights.value,
       numberOfGuests: numberOfGuests.value,
       email: email.value,
       phone: phone.value,
@@ -85,11 +74,6 @@ const bookingModule = (function () {
     const checkOut = Date.parse(departureDate.value);
     numberOfNights.value = Math.round(Math.abs((checkOut - checkIn) / (oneDay)));
   }
-
-
-  // function addBookingDatesToRoomRegistry(array) {
-  //   roomRegistry[roomType.value].push(...array);
-  // }
 
 
   function saveBookingInfoToLocalStorage(array) {
@@ -132,7 +116,6 @@ const bookingModule = (function () {
     const bookingInfo = [];
     let bookingId = generateBookingId();
     let dates = getIndividualDates(new Date(arrivalDate.value), new Date(departureDate.value));
-    // addBookingDatesToRoomRegistry(dates);
     bookingInfo.push(addBookingInfoToArray(bookingId, dates));
     saveBookingInfoToLocalStorage(bookingInfo);
     alertSuccess(bookingId);
