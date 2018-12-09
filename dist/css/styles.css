@@ -1,3 +1,20 @@
+@font-face {
+  font-family: Poppins-Regular;
+  src: url("../assets/fonts/Poppins-Regular.ttf"); }
+
+@font-face {
+  font-family: Poppins-ExtraLight;
+  src: url("../assets/fonts/Poppins-ExtraLight.ttf"); }
+
+@font-face {
+  font-family: Sintony-Regular;
+  src: url("../assets/fonts/Sintony-Regular.ttf"); }
+
+@font-face {
+  font-family: Sintony-Regular;
+  src: url("../assets/fonts/Sintony-Bold.ttf");
+  font-weight: bold; }
+
 html {
   box-sizing: border-box; }
 
@@ -9,7 +26,11 @@ html {
 body {
   margin: 0;
   padding: 0;
-  line-height: 1.618; }
+  line-height: 1.618;
+  font-family: Sintony-Regular, sans-serif; }
+
+h1, h2, h3, h4 {
+  font-family: Poppins-Regular, sans-serif; }
 
 body.modal-open {
   overflow: hidden; }
@@ -836,9 +857,12 @@ body.modal-open {
   display: none; }
 
 .gallery__container {
-  padding-top: 200px;
+  padding-top: 100px;
   width: 1170px;
   margin: 0 auto; }
+  .gallery__container h1 {
+    text-align: center;
+    color: #dbb94b; }
 
 .gallery {
   list-style: none;
