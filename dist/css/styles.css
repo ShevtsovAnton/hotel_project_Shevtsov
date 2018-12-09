@@ -1298,6 +1298,10 @@ input[type="radio"][name="tabs"] {
 .not-visible {
   display: none; }
 
+#bookingSuccess {
+  text-align: center;
+  color: green; }
+
 #displayBookingInfo {
   display: flex;
   flex-direction: column;

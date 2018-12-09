@@ -3,7 +3,6 @@ const bookingModule = (function () {
   //cache dome
   const arrivalDate = document.getElementById('booking-arivalDate');
   const departureDate = document.getElementById('booking-departureDate');
-  // const numberOfNights = document.getElementById('numberOfNights');
   const fullName = document.getElementById('booking-fullName');
   const email = document.getElementById('booking-email');
   const numberOfGuests = document.getElementById('booking-guests');
@@ -68,14 +67,6 @@ const bookingModule = (function () {
 
   }
 
-
-  function calculateNumberOfNights() {
-    const checkIn = Date.parse(arrivalDate.value);
-    const checkOut = Date.parse(departureDate.value);
-    numberOfNights.value = Math.round(Math.abs((checkOut - checkIn) / (oneDay)));
-  }
-
-
   function saveBookingInfoToLocalStorage(array) {
     const storedBookings = JSON.parse(localStorage.getItem('bookings'));
     if (storedBookings) {
@@ -99,7 +90,6 @@ const bookingModule = (function () {
     fullName.value = '';
     arrivalDate.value = '';
     departureDate.value = '';
-    numberOfNights.value = '';
     email.value = '';
     phone.value = '';
   }
