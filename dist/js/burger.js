@@ -3,6 +3,19 @@ const closeBurgerButton = document.getElementById('burger-close');
 const burgerBackdrop = document.getElementById('burger-backdrop');
 const burgerMenu = document.getElementById('burger-menu');
 const burgerMenuItems = document.querySelectorAll('.burger__menu-item');
+const burgerMenuAccomodation = document.getElementById('burgerMenuAccomodations');
+const burgerDropdownList = document.getElementById('burgerDropdownList');
+
+
+burgerMenuAccomodation.addEventListener('click', function(e) {
+  e.preventDefault();
+  console.log('clicked');
+  if (burgerDropdownList.classList.contains('hidden')) {
+    burgerDropdownList.classList.remove('hidden');
+  } else {
+    burgerDropdownList.classList.add('hidden');
+  }
+})
 
 function toggle(e) {
   // e.preventDefault();
@@ -31,10 +44,10 @@ function toggle(e) {
   }
 }
 
-for (let i = 0; i < burgerMenuItems.length; i++) {
-  console.log(`burger-item ${burgerMenuItems[i]}`);
-  burgerMenuItems[i].addEventListener('click', (e) => toggle(e));
-}
+// for (let i = 0; i < burgerMenuItems.length; i++) {
+//   console.log(`burger-item ${burgerMenuItems[i]}`);
+//   burgerMenuItems[i].addEventListener('click', (e) => toggle(e));
+// }
 
 openBurgerButton.addEventListener('click', e => toggle(e));
 closeBurgerButton.addEventListener('click', e => toggle(e));

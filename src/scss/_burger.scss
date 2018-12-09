@@ -36,7 +36,7 @@
     z-index: 999;
 }
 
-.burger__menu ul {
+.burger__menu .burger__menu-list {
   list-style: none;
   margin: 0;
   padding: 40px 0 0;
@@ -116,4 +116,9 @@
   .main-nav__list {
     display: none;
   }
+}
+
+.burger__dropdown-list {
+  margin: 0;
+  padding: 0;
 }
