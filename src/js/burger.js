@@ -12,8 +12,10 @@ burgerMenuAccomodation.addEventListener('click', function(e) {
   console.log('clicked');
   if (burgerDropdownList.classList.contains('hidden')) {
     burgerDropdownList.classList.remove('hidden');
+    burgerMenuAccomodation.style.textDecoration = 'underline';
   } else {
     burgerDropdownList.classList.add('hidden');
+    burgerMenuAccomodation.style.textDecoration = 'none';
   }
 })
 

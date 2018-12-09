@@ -12,25 +12,14 @@ burgerMenuAccomodation.addEventListener('click', function(e) {
   console.log('clicked');
   if (burgerDropdownList.classList.contains('hidden')) {
     burgerDropdownList.classList.remove('hidden');
+    burgerMenuAccomodation.style.textDecoration = 'underline';
   } else {
     burgerDropdownList.classList.add('hidden');
+    burgerMenuAccomodation.style.textDecoration = 'none';
   }
 })
 
 function toggle(e) {
-  // e.preventDefault();
-  // const n = document.getElementById(id);
-  // const m = document.getElementById(id2);
-  // const k = document.getElementById(id3);
-  // if (n.getAttribute('aria-expanded') === 'false') {
-  //   n.setAttribute('aria-expanded', 'true');
-  //   m.setAttribute('aria-expanded', 'true');
-  //   k.setAttribute('aria-expanded', 'true');
-  // } else {
-  //   n.setAttribute('aria-expanded', 'false');
-  //   m.setAttribute('aria-expanded', 'false');
-  //   k.setAttribute('aria-expanded', 'false');
-  // }
 
   e.preventDefault(e);
   if (openBurgerButton.getAttribute('aria-expanded') === 'false') {
@@ -43,11 +32,6 @@ function toggle(e) {
     closeBurgerButton.setAttribute('aria-expanded', 'false');
   }
 }
-
-// for (let i = 0; i < burgerMenuItems.length; i++) {
-//   console.log(`burger-item ${burgerMenuItems[i]}`);
-//   burgerMenuItems[i].addEventListener('click', (e) => toggle(e));
-// }
 
 openBurgerButton.addEventListener('click', e => toggle(e));
 closeBurgerButton.addEventListener('click', e => toggle(e));
