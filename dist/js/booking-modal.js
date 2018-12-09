@@ -33,10 +33,8 @@ for (let i = 0; i < bookNowButtons.length ; i++) {
     bookNowButtons[i].addEventListener("click", 
     function (event) {
       event.preventDefault();
-    //   document.getElementById("userInfo").innerHTML = "";
       bookingModal.style.display = "block";
       body.classList.add('modal-open');
-    //   createUserInfo(users[userAnchors[i].getAttribute('data-userId') - 1]);
       }, 
     false);
 }

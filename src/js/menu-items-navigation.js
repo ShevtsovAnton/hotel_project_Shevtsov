@@ -4,10 +4,11 @@ const restaurantsSection = document.getElementById('restaurantsSection');
 const servicesSection = document.getElementById('servicesSection');
 const specialOffersSection = document.getElementById('specialOffersSection');
 const navItems = document.querySelectorAll('.nav-item__container');
-const accomodationsLink = document.querySelector(".main-nav__accomodations-link");
-const restaurantsLink = document.querySelector(".main-nav__reataurants-link");
-const servicesLink = document.querySelector(".main-nav__services-link");
-const offersLink = document.querySelector(".main-nav__offers-link");
+const servicesLinks = document.querySelectorAll(".main-nav__services-link");
+const accomodationsLinks = document.querySelectorAll(".main-nav__accomodations-link");
+const restaurantsLinks = document.querySelectorAll(".main-nav__reataurants-link");
+const offersLinks = document.querySelectorAll(".main-nav__offers-link");
+const burgerOpenButton = document.getElementById('burger-toggle');
 const homeLinks = document.querySelectorAll(".breadcrumbs__home-link");
 const additionalInfo = document.querySelector(".additional-info");
 const hotelInfo = document.querySelector(".hotel-info");
@@ -30,27 +31,44 @@ function removeHiddenClass(element) {
     element.classList.remove('hidden');
 }
 
+
 function displayMenuSection(event, element) {
     event.preventDefault();
     hideHomePageSections();
     removeHiddenClass(element);
+    document.getElementById('burger-menu').setAttribute('aria-expanded', 'false');
+    document.getElementById('burger-toggle').setAttribute('aria-expanded', 'false');
 }
 
-accomodationsLink.addEventListener('click', function(ev) {
+
+accomodationsLinks.forEach(function(el) {
+    el.addEventListener('click', function(ev) {
     displayMenuSection(ev, accomodationsSection);
+    });
 })
 
-restaurantsLink.addEventListener('click', function(ev) {
-    displayMenuSection(ev, restaurantsSection);
+
+restaurantsLinks.forEach(function(el) {
+    el.addEventListener('click', function(ev) {
+        displayMenuSection(ev, restaurantsSection);
+    });
 })
 
-servicesLink.addEventListener('click', function(ev) {
-    displayMenuSection(ev, servicesSection);
-})
 
-offersLink.addEventListener('click', function(ev) {
-    displayMenuSection(ev, specialOffersSection);
+servicesLinks.forEach(function(el) {
+    el.addEventListener('click', function(ev) {
+        displayMenuSection(ev, servicesSection);
+        
+    })
 });
+
+
+offersLinks.forEach(function(el) {
+    el.addEventListener('click', function(ev) {
+    displayMenuSection(ev, specialOffersSection);
+    })
+});
+
 
 //home link in breadcrumbs
 for (i = 0; i < homeLinks.length; i++) {

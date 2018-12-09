@@ -7,17 +7,16 @@ const burgerMenuAccomodation = document.getElementById('burgerMenuAccomodations'
 const burgerDropdownList = document.getElementById('burgerDropdownList');
 
 
-burgerMenuAccomodation.addEventListener('click', function(e) {
-  e.preventDefault();
-  console.log('clicked');
-  if (burgerDropdownList.classList.contains('hidden')) {
-    burgerDropdownList.classList.remove('hidden');
-    burgerMenuAccomodation.style.textDecoration = 'underline';
-  } else {
-    burgerDropdownList.classList.add('hidden');
-    burgerMenuAccomodation.style.textDecoration = 'none';
-  }
-})
+// burgerMenuAccomodation.addEventListener('click', function(e) {
+//   e.preventDefault();
+//   if (burgerDropdownList.classList.contains('hidden')) {
+//     burgerDropdownList.classList.remove('hidden');
+//     burgerMenuAccomodation.style.textDecoration = 'underline';
+//   } else {
+//     burgerDropdownList.classList.add('hidden');
+//     burgerMenuAccomodation.style.textDecoration = 'none';
+//   }
+// })
 
 function toggle(e) {
 
@@ -36,3 +35,4 @@ function toggle(e) {
 openBurgerButton.addEventListener('click', e => toggle(e));
 closeBurgerButton.addEventListener('click', e => toggle(e));
 burgerBackdrop.addEventListener('click', e => toggle(e));
+

@@ -121,4 +121,9 @@
 .burger__dropdown-list {
   margin: 0;
   padding: 0;
+  display: none;
+}
+
+.burger__menu-item.accomodations:hover > .burger__dropdown-list{
+  display: block;
 }

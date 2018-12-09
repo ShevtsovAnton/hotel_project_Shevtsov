@@ -25,26 +25,3 @@ for (let i = 0; i < slidePreviousButtons.length; i++) {
         slider.style.left = `${counter}%`;
     })
 }
-
-
-// slideNextButtons.forEach(function(element) {
-//     element.addEventListener('click', function(event) {
-//         event.preventDefault();
-//         counter -= 100;
-//         if ((counter == -400) || (counter == 0)) {
-//             counter = 0;
-//         }
-//         slider.style.left = `${counter}%`;
-//     })
-// })
-
-// slidePreviousButtons.forEach(function(element) {
-//     element.addEventListener('click', function(event) {
-//         event.preventDefault();
-//         counter += 100;
-//         if (counter == 100) {
-//             counter = -300;
-//         }
-//         slider.style.left = `${counter}%`;
-//     })
-// })

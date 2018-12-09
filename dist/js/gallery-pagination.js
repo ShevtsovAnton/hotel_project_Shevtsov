@@ -8,15 +8,11 @@ const displayGallery = (function() {
   
 
     //cache Dome 
-    // let displayedPics = document.querySelectorAll('.image-box.displayIt');
     const pics = document.querySelectorAll('.image-box');
     const lightbox = document.getElementById('lightbox');
     const close = document.getElementById('close');
     const overlay = document.getElementById('overlay');
-    // const thumbnails = document.querySelectorAll('.thumbnail');
-  
-    //data 
-    // let clickedImageSrc; 
+
   
     //functions
     function displayOnThePage(numberOfElement, currentPage) {
