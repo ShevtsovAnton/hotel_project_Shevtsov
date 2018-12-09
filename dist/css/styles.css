@@ -1261,3 +1261,19 @@ input[type="radio"][name="tabs"] {
 
 .not-visible {
   display: none; }
+
+#displayBookingInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px; }
+  #displayBookingInfo h3 {
+    margin: 0;
+    color: green; }
+  #displayBookingInfo .booking-error {
+    color: red;
+    text-align: center;
+    margin: 20px 0; }
+
+.bookingInfo__property {
+  font-weight: bold; }

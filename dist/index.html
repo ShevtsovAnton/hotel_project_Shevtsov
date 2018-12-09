@@ -302,7 +302,7 @@
                     <li>
                         Cafeteria style:
                         <p>
-                            In this type of buffet, customers are required to select plates of food according to their choice while waiting in a queue. The cafeteria-style buffet is less frequently practised in restaurants.  
+                            In this type of buffet, customers are  to select plates of food according to their choice while waiting in a queue. The cafeteria-style buffet is less frequently practised in restaurants.  
                         </p> 
                     </li>
                     <li>
@@ -695,17 +695,17 @@
                                         </label>
     
                                         <label for="booking__fullName">Full Name
-                                            <input type="text" name="booking__fullName" id="booking-fullName" class="booking-form__item">
+                                            <input type="text" name="booking__fullName" id="booking-fullName" class="booking-form__item" />
                                         </label>
                                         <label for="booking__arivalDate">Arrival Date
-                                            <input type="date" name="booking__arivalDate" id="booking-arivalDate" class="booking-form__item">
+                                            <input type="date" name="booking__arivalDate" id="booking-arivalDate" class="booking-form__item" >
                                         </label>
                                         <label for="booking__departureDate">Departure Date
-                                            <input type="date" name="booking__departureDate" id="booking-departureDate" class="booking-form__item">
+                                            <input type="date" name="booking__departureDate" id="booking-departureDate" class="booking-form__item" >
                                         </label>
-                                        <label for="booking__nights">Nights
+                                        <!-- <label for="booking__nights">Nights
                                             <output id="numberOfNights">00</output class="booking-form__item">
-                                        </label>
+                                        </label> -->
                                         <label for="booking__guests">Guests
                                             <select name="booking__guests" id="booking-guests" class="booking-form__item">
                                                 <option value="1">1</option>
@@ -715,13 +715,15 @@
                                             </select>
                                         </label>
                                         <label for="booking__email">Email
-                                            <input name="booking__email" id="booking-email" type="email" class="booking-form__item">
+                                            <input name="booking__email" id="booking-email" type="email" class="booking-form__item" >
                                         </label>
                                         <label for="booking__phone">Phone
-                                            <input name="booking__phone" id="booking-phone" type="tel" class="booking-form__item">
+                                            <input name="booking__phone" id="booking-phone" type="tel" class="booking-form__item" >
                                         </label>
-                                        <button type="submit"id="booking-submitButton">Book</button>
+                                        <div id="bookingSuccess"></div>
+                                        <button type="submit" id="booking-submitButton">Book</button>
                                     </form>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -734,10 +736,10 @@
                                     <form action="" id="bookingForm">
                                         <h2>Check Your Booking Information</h2>
                                         <label for="checkBooking__number">Booking Number
-                                            <input type="number" name="checkBooking__number" id="checkBooking-number" class="booking-form__item">
+                                            <input type="number" name="checkBooking__number" id="checkBooking-number" class="booking-form__item" >
                                         </label>
                                         <label for="checkBooking__email">Email
-                                            <input type="email" name="checkBooking__email" id="checkBooking-email" class="booking-form__item">
+                                            <input type="email" name="checkBooking__email" id="checkBooking-email" class="booking-form__item" >
                                         </label>
                                         <button type="submit" id="checkBooking-submitButton">Submit</button>
                                     </form>

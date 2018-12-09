@@ -36,3 +36,26 @@
 .not-visible {
     display: none;
 }
+
+#displayBookingInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+
+    & h3 {
+        margin: 0;
+        color: green;
+    }
+
+    & .booking-error {
+        color: red;
+        text-align: center;
+        margin: 20px 0;
+    }
+}
+
+.bookingInfo__property {
+    font-weight: bold;
+}
+

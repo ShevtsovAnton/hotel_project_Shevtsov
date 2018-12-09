@@ -103,6 +103,13 @@ const bookingModule = (function () {
     console.log('Congrationlations! Your Booking Number is ' )
   }
 
+  function alertSuccess(bookingId) {
+    let bookingSuccess = document.getElementById('bookingSuccess');
+    let successMessage = document.createElement('h4');
+    successMessage.appendChild(document.createTextNode(`Congratulations! Your booking number is: ${bookingId}`));
+    bookingSuccess.appendChild(successMessage);
+    submitButton.disabled = true;
+  }
 
   function clearFormFields() {
     fullName.value = '';
@@ -111,6 +118,12 @@ const bookingModule = (function () {
     numberOfNights.value = '';
     email.value = '';
     phone.value = '';
+  }
+
+  function clearModal(parent) {
+    while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+    }
   }
 
 
@@ -122,7 +135,8 @@ const bookingModule = (function () {
     // addBookingDatesToRoomRegistry(dates);
     bookingInfo.push(addBookingInfoToArray(bookingId, dates));
     saveBookingInfoToLocalStorage(bookingInfo);
-    // clearFormFields()
+    alertSuccess(bookingId);
+    clearFormFields()
   }
 
 
@@ -152,34 +166,63 @@ const checkBookingModule = (function () {
   const bookingEmailField = document.getElementById('checkBooking-email');
   const storedBookings = JSON.parse(localStorage.getItem('bookings'));
   const submitButton = document.getElementById('checkBooking-submitButton');
+  const modalGeneratedInfo = document.getElementById('displayBookingInfo');
 
 
   function checkBooking(event) {
     event.preventDefault();
-    // console.log(storedBookings);
+    const storedBookings = JSON.parse(localStorage.getItem('bookings'));
+    clearModal(modalGeneratedInfo);
     let storedBookingInfo = storedBookings.filter( element => element.bookingId === bookingNumberField.value);
-    console.log(storedBookingInfo, storedBookingInfo[0].email);
+    if (storedBookingInfo.length === 0) {
+        renderError();
+        return;
+    }
     if (bookingEmailField.value === storedBookingInfo[0].email) {
-      console.log('Booking info: ...');
       renderBookingInfo(storedBookingInfo[0]);
     } else {
-      console.log('Booking info is not found');
+      renderError();
     }
   }
 
   //FUNCTION CREATE USER INFO MODAL
+  function renderError() {
+    const result = document.getElementById('displayBookingInfo');
+    let title = document.createElement("h3");
+    title.setAttribute("class", "booking-error");
+    title.appendChild(document.createTextNode("Nothing was found. Check provided information."));
+    result.appendChild(title);
+  }
 
   function renderBookingInfo(booking) {
     const result = document.getElementById('displayBookingInfo');
     while (result.firstChild) {
       result.removeChild(result.firstChild);
       }
+
+    let title = document.createElement("h3");
+    title.appendChild(document.createTextNode("Your Booking Information:"));
+    result.appendChild(title);
+
     const keys = Object.keys(booking);
     keys.forEach(function (key) {
-      let span = document.createElement("span");
-      span.setAttribute("class", "bookingInfo__key");
-      span.appendChild(document.createTextNode(key + ": " + booking[key]));
-      result.appendChild(span);
+      if (key === 'dates') {
+        return 
+      };
+      let container = document.createElement("div");
+      container.setAttribute("class", "bookingInfo-line__container");
+      
+      let keySpan = document.createElement("span");
+      keySpan.setAttribute("class", "bookingInfo__key");
+      keySpan.appendChild(document.createTextNode(key + ": "));
+      container.appendChild(keySpan);
+
+      let propertySpan = document.createElement("span");
+      propertySpan.setAttribute("class", "bookingInfo__property");
+      propertySpan.appendChild(document.createTextNode(booking[key]));
+      container.appendChild(propertySpan);
+
+      result.appendChild(container);
 
       return result;
 
