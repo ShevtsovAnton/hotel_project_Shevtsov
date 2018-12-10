@@ -83,7 +83,6 @@ const bookingModule = (function () {
     let successMessage = document.createElement('h4');
     successMessage.appendChild(document.createTextNode(`Congratulations! Your booking number is: ${bookingId}`));
     bookingSuccess.appendChild(successMessage);
-    submitButton.disabled = true;
   }
 
   function clearFormFields() {
